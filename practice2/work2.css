@@ -1,0 +1,65 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"poppins", Helvetica, sans-serif;  
+line-height:25px; 
+}
+
+body{
+background:pink;   
+display:flex;
+flex-direction:column;
+gap:20px; 
+}
+
+
+.qna{
+width:90vw;
+background:beige; 
+display:flex;
+flex-direction:column;
+gap:10px;
+cursor: pointer;
+}
+
+
+.question{
+display:flex; 
+justify-content:space-between;
+margin-right:10px;
+}
+
+
+.divans{
+width:80vw;
+color:#555;
+}
+
+.ans{
+height:0;
+overflow: hidden;  
+transition:all 0.5s ease;      
+}
+
+.ans.active{
+height:100px;   
+}
+
+
+.downarrow{
+transition:all 0.5s ease;    
+}
+
+
+.downarrow.active{
+transform:rotateX(180deg);
+}
+
+
+
+
+
+
+
+

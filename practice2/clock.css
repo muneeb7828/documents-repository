@@ -1,0 +1,81 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;    
+}
+
+body{
+display:flex;
+justify-content:center;   
+}
+
+
+.divcontainer{
+position: relative; 
+height:40vh;
+width:40vw;   
+}
+
+
+img{
+position: absolute;
+height:100%;
+width:100%;
+background:yellow;
+z-index:-1;
+}
+
+
+
+#hour{
+height: 15%;
+width: 1%;
+background: black;
+position: absolute;
+top: 40.7%;
+left: 50.24%;
+transform-origin:bottom;
+}
+
+#minute{
+height: 17%;
+width: 0.5%;
+background: black;
+position: absolute;
+top: 38.7%;
+left: 50.5%;
+opacity:0.8;
+transform-origin:bottom;
+}
+
+
+#second{
+height: 17.5%;
+width: 0.2%;
+background: black;
+position: absolute;
+top: 38%;
+left: 50.6%;
+opacity:0.8;
+transform-origin:bottom;
+}
+
+
+#scale{
+height:70%;
+width:10%;
+background:black; 
+position:absolute;
+top:56%;
+left:45.6%;
+z-index:-2;
+transform-origin:top;
+transition-duration:2s;
+}
+
+
+
+
+
+
+
