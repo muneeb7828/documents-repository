@@ -78,8 +78,9 @@
 // pheli value ye kya karta he ki ye variable hi hoti he 
 // aur jo dusri value hoti he vo array ki pheli value ko change kar deti he hamesha ke liye
 // aur usestate me ek agrument bhi hota he jo initial value ke liye hota he
+// aur ye 0 ko set nahi karta
 // ye he iska syntax
-// let [count,update]=usestate() 
+// let [count,setcount]=usestate() 
 
 
 
