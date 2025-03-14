@@ -52,7 +52,10 @@
 
 
 
-// export default and name
+// export default and name export
+
+// export default ko ek baar hi import kar pate he
+// name export ko baar baar import kar sakte he
 
 
 // props in react
@@ -63,6 +66,9 @@
 // ye object hota he aur isko jis me props inject kar rahe he usme likhte he
 // aur iske andar data types likhte he jis se ye pata rehta he ki jab bhi banay to pata rahe konsa data type use karna he
 
+
+// window.confirm()
+// isse confirm alert show kar sakte he
 
 
 
