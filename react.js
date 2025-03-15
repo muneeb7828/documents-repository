@@ -34,7 +34,16 @@
 
 
 // virtual dom in react
-// ye dom ka copy hota he aur iska use isliye hota he jab bhi kuch cheez change karte he to ye real dom se compare karta he aur jo change ho vo dom me daal deta he jisse pura page reload nahi hota
+// ye dom ka copy hota he aur iska use isliye hota he jab bhi kuch cheez change karte he to ye rerender hota he aur fir diff algorithm ki madat se dekhta he ki kya difference he aur jo difference hota he bas vo hi real dom me daal deta jisse real dom pura reload nahi hota 
+
+
+// diff Algorithms
+// diff Algorithms ye kya karta he ki ye difference find karta he virtual dom me aur real dom me
+
+// Reconciliation Algorithms (React Fiber)
+// re-rendering process yani jo browser pe rerender hota he usko hi Reconciliation Algorithms bolte he aur usko hi react fiber bolte he
+
+
 
 
 // components
@@ -90,7 +99,18 @@
 
 
 
+// setcount((variable)=>{return variable+1})  
+// setcount((variable)=>{return variable+5})  
+// setcount((variable)=>{return variable+10})  
+// setcount((variable)=>{return variable+15})  
+// setcount((variable)=>{return variable+20})  
 
+
+// agar current ko setcurrent ke andar callback function me daal ke add karenge to vo ek saath sab ko add kar dega
+
+
+
+// sweetalert2 
 
 
 
