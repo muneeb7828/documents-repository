@@ -99,6 +99,9 @@
 // aur jo dusri value hoti he vo array ki pheli value ko change kar deti he hamesha ke liye
 // aur usestate me ek agrument bhi hota he jo initial value ke liye hota he
 // aur ye 0 ko set nahi karta
+// aur setcurrent variable ko change karne ke sath sath page ko rerender bhi kardeta he
+
+
 // ye he iska syntax
 // let [count,setcount]=usestate() 
 
@@ -118,17 +121,28 @@
 
 
 // usecallback
-// ye hook memory me save karta he aur ye ek dependency array bhi leta he
+// ye hook memory me save karta he aur ye ek dependency array bhi leta he aur agar array me variable nahi dalenge to vo nahi chalega agar vo usecallback function me he to
 
 
 // useeffect
 // ye hook chalane ka kaam karta he aur ye ek dependency array bhi leta he
+// aur ye usestate ko rokne ke liye bhi hota he
 
 
 // useRef
 // ye reference ke liye hota he agar ham chate he ki copy kare to uspe reference bhi ajay to iska use karenge 
+// aur isko variable me store karenge aur variable ko tag me ref ke andar daalenge jisse connect ho jayga fir use kar payenge
+// ye he iska syntax
 
+// let reference=useRef(null)
 
+// let copy=()=>{
+  
+// reference.current.select()
+// reference.current.setSelectionRange(0,10)
+// window.navigator.clipboard.writeText(password)
+
+// }
 
 
 
