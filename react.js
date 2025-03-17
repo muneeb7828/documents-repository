@@ -118,15 +118,15 @@
 
 
 // usecallback
-// ye hook memory me save karta he
+// ye hook memory me save karta he aur ye ek dependency array bhi leta he
 
 
 // useeffect
-// ye hook chalane ka kaam karta he
+// ye hook chalane ka kaam karta he aur ye ek dependency array bhi leta he
 
 
-// useref
-
+// useRef
+// ye reference ke liye hota he agar ham chate he ki copy kare to uspe reference bhi ajay to iska use karenge 
 
 
 

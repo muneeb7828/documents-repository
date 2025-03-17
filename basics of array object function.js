@@ -943,4 +943,5 @@ console.log(daa)
 // ye property hoti he input tag ki jo ki true or false return karti he
 
 
-
+// window.navigator.clipboard.writeText(password)
+// isse copy kar sakte he kisi bhi cheez ko
