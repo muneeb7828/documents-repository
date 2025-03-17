@@ -929,3 +929,18 @@ console.log(daa)
 // ye string ko code me convert karta he aur calculate kar deta he
 
 
+// charAt()
+// ye index ki value batata he aur index 1.344 to ye 1 batayga
+
+// math.random()
+// ye 0 se 1 tak random number generate karta he
+
+// math.floor()
+// ye hamesha choti value deta he agar point me likha he to ye 12.2323 to ye 12 return karega
+
+
+// defaultChecked
+// ye property hoti he input tag ki jo ki true or false return karti he
+
+
+

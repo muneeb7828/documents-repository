@@ -81,6 +81,11 @@
 
 
 
+// sweetalert2 
+
+
+// lnm
+
 
 // hooks
 // react me bohot saare hooks hote jese usestate hook hota aur bhi bohot saare hooks hote he
@@ -109,11 +114,18 @@
 // agar current ko setcurrent ke andar callback function me daal ke add karenge to vo ek saath sab ko add kar dega
 
 
-
-// sweetalert2 
-
+// ye sab hooks hote he
 
 
+// usecallback
+// ye hook memory me save karta he
+
+
+// useeffect
+// ye hook chalane ka kaam karta he
+
+
+// useref
 
 
 
