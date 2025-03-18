@@ -114,11 +114,11 @@
 // setcount((variable)=>{return variable+20})  
 
 
-// agar current ko setcurrent ke andar callback function me daal ke add karenge to vo ek saath sab ko add kar dega
+// agar setcurrent ke andar callback function me daal ke add karenge to vo ek saath sab ko add kar dega
+
 
 
 // ye sab hooks hote he
-
 
 // usecallback
 // ye hook memory me save karta he aur ye ek dependency array bhi leta he aur agar array me variable nahi dalenge to vo nahi chalega agar vo usecallback function me he to
@@ -156,6 +156,11 @@
 // useMemo()
 // ye hook useEffect ki tarah hota he ye kya karta he ki jo bhi value iske andar likhi hoti usko cache kar leta he matlab memory me save kar leta he to jab page rerender hota he to ye rerender to hota he lekin time nahi leta 
 // aur ye value ke liye hota he aur useCallback pure function ke liye hota he
+
+
+// useReducer()
+
+
 
 
 
