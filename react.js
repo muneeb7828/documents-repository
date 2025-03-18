@@ -146,3 +146,16 @@
 
 
 
+
+
+// react.memo()
+// is method ka use karne se agar child component befuzuul rerender ho raha he to iska use karne se nahi hoga
+
+
+
+// useMemo()
+// ye hook useEffect ki tarah hota he ye kya karta he ki jo bhi value iske andar likhi hoti usko cache kar leta he matlab memory me save kar leta he to jab page rerender hota he to ye rerender to hota he lekin time nahi leta 
+// aur ye value ke liye hota he aur useCallback pure function ke liye hota he
+
+
+
