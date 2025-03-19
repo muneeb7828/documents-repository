@@ -41,7 +41,7 @@
 // diff Algorithms ye kya karta he ki ye difference find karta he virtual dom me aur real dom me
 
 // Reconciliation Algorithms (React Fiber)
-// re-rendering process yani jo browser pe rerender hota he usko hi Reconciliation Algorithms bolte he aur usko hi react fiber bolte he
+// ye jo changes hote he virtual dom me usko real dom me daal deta he
 
 
 
@@ -87,6 +87,9 @@
 // lnm
 
 
+// agar same page pe 1 se zada component bana rahe he to usme export import nahi likhenge
+
+
 // hooks
 // react me bohot saare hooks hote jese usestate hook hota aur bhi bohot saare hooks hote he
 
@@ -107,11 +110,11 @@
 
 
 
-// setcount((variable)=>{return variable+1})  
-// setcount((variable)=>{return variable+5})  
-// setcount((variable)=>{return variable+10})  
-// setcount((variable)=>{return variable+15})  
-// setcount((variable)=>{return variable+20})  
+// setcurrent((variable)=>{return variable+1})  
+// setcurrent((variable)=>{return variable+5})  
+// setcurrent((variable)=>{return variable+10})  
+// setcurrent((variable)=>{return variable+15})  
+// setcurrent((variable)=>{return variable+20})  
 
 
 // agar setcurrent ke andar callback function me daal ke add karenge to vo ek saath sab ko add kar dega
@@ -129,9 +132,10 @@
 // aur ye usestate ko rokne ke liye bhi hota he
 
 
-// useRef
+// useRef()
 // ye reference ke liye hota he agar ham chate he ki copy kare to uspe reference bhi ajay to iska use karenge 
 // aur isko variable me store karenge aur variable ko tag me ref ke andar daalenge jisse connect ho jayga fir use kar payenge
+// aur ye object hota he aur iske andar ek current property hoti he jiske andar ref ata he
 // ye he iska syntax
 
 // let reference=useRef(null)
@@ -163,4 +167,27 @@
 
 
 
+
+
+
+// css modules
+// jab bhi apan css file import karte he to vo global hoti he to isiliye css modules ka istemaal karte he taki har component ke liye ek diffrent css apply ho
+// aur jab bhi css module ki file banaenge to index.module.css ese bayenge 
+// aur jab isko import karenge to isko name dena padega aur jo name delge vo object ban jayga unsaari classes ka
+// to jab bhi hame css use karni hogi to name.classname karke karni hogi
+// aur agar class ka name hyphen ke saath he to ese use karenge name["nav-container"] 
+
+
+
+
+// React Router
+// iska use karke alag alag page bana sakte he  aur isme bohot saari cheez hoti he 
+// aur isme phele isko install karna hota he ye commond dalke npm i react-router-dom 
+// aur fir isko import karna hota he ese import { BrowserRouter, Routes,Route } from 'react-router-dom'
+// aur fir BrowserRouter isko return ke andar call karte he aur fir uske andar Routes ko call karte he aur uske andar jitne bhi chahe utne route bana sakte he
+// aur route ke andar path dete he page banane ke liye aur element dete he component ke liye ke us page pe konsa component ho
+
+
+// aur jis bhi component ko redirect karna he us page pe to us component ke andar Link ko import karna padta he ese import { Link } from 'react-router-dom'
+// aur link tag ko lkhte he us tag pe jispe click karke page pe redirect karna he
 
