@@ -191,3 +191,17 @@
 // aur jis bhi component ko redirect karna he us page pe to us component ke andar Link ko import karna padta he ese import { Link } from 'react-router-dom'
 // aur link tag ko lkhte he us tag pe jispe click karke page pe redirect karna he
 
+
+
+
+// Controlled and uncontrolled react component
+
+// Controlled component vo hote jo react controlled kar raha he jese usesate se ya eventhandler se
+
+// aur uncontrolled component vo hote he jo react handle nahi kar raha jese dom se value get karna ya useref ka use karke value get karna etc
+
+
+
+
+
+
