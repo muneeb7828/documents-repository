@@ -89,6 +89,14 @@
 
 // agar same page pe 1 se zada component bana rahe he to usme export import nahi likhenge
 
+// Controlled and uncontrolled react component
+
+// Controlled component vo hote jo react controlled kar raha he jese usesate se ya eventhandler se
+
+// aur uncontrolled component vo hote he jo react handle nahi kar raha jese dom se value get karna ya useref ka use karke value get karna etc
+
+
+
 
 // hooks
 // react me bohot saare hooks hote jese usestate hook hota aur bhi bohot saare hooks hote he
@@ -163,65 +171,22 @@
 
 
 // useReducer()
+// ye hook useState ka alternative hota he bas isse aur asaan hojata he isme baar baar usestate nahi banana padta he ek hi usereduser hook se kaam hojata he
+// bas ye usestate se ek argument zada leta he reduce function ka jo ke call hota he usse jo usereducer return karta he uski 2 value se 
+// aur jo reduce function hota he vo 2 parameter leta he phela current value ka aur dusra action ka aur isse benifit hota he ke pata chal jata he konse button ke liye he 
+// to jab bhi call kare to key pairs me value de jisse pata chal jay kiske liye he
 
 
 
 
 
-// css modules:-
-// jab bhi apan css file import karte he to vo global hoti he to isiliye css modules ka istemaal karte he taki har component ke liye ek diffrent css apply ho
-// aur jab bhi css module ki file banaenge to index.module.css ese bayenge 
-// aur jab isko import karenge to isko name dena padega aur jo name delge vo object ban jayga unsaari classes ka
-// to jab bhi hame css use karni hogi to name.classname karke karni hogi
-// aur agar class ka name hyphen ke saath he to ese use karenge name["nav-container"] 
+// usecontext()
 
 
 
 
-
-// React Router
-// iska use karke alag alag page bana sakte he  aur isme bohot saari cheez hoti he 
-// aur isme phele isko install karna hota he ye commond dalke npm i react-router-dom 
-// aur fir isko import karna hota he ese import { BrowserRouter, Routes,Route } from 'react-router-dom'
-// aur fir BrowserRouter isko return ke andar call karte he aur fir uske andar Routes ko call karte he aur uske andar jitne bhi chahe utne route bana sakte he
-// aur route ke andar path dete he page banane ke liye aur element dete he component ke liye ke us page pe konsa component ho
-
-
-// aur jis bhi component ko redirect karna he us page pe to us component ke andar Link ko import karna padta he ese import { Link } from 'react-router-dom'
-// aur link tag ko likhte he us tag pe jispe click karke page pe redirect karna he
-
-
-
-// useparams()
-// useparams() ye router ka hook hota he aur ye object return karta he aur iska use isliye karta he taki route ke path ko dynamic banane ke liye 
-// aur ye tabhi kaam aayga jab route me path /: ese likhenge aur iske baad jo bhi likhenge vo property ban jaygi aur browser ke location me jo / iske baad jo likhenge vo iski value ban ban jaygi
-
-
-
-
-// parent child route
-// agar ham route ke andar route banate he to usi ko parent child route bolte he
-
-
-// outlet
-// aur isko parent component me import karte he taki jo child componenet he uski position ke liye ke kaha par rakhna he
-
-
-
-
-// Controlled and uncontrolled react component
-
-// Controlled component vo hote jo react controlled kar raha he jese usesate se ya eventhandler se
-
-// aur uncontrolled component vo hote he jo react handle nahi kar raha jese dom se value get karna ya useref ka use karke value get karna etc
-
-
-
-
-// axious
-// axious ye bhi fetch ki tarah hota he bas isse asaan hojata he data ko lena 
-
-
+// contextapi
+// context provider aur consumer in teeno ko mila kar hi contextapi banta he
 
 
 
