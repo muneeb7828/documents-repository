@@ -178,6 +178,29 @@
 
 
 
+function reducer(state,action){
+
+switch (action.type){
+case "increment":return state=state+1;
+case "decrement":return state=state-1
+case "reset":return state=0
+}
+
+
+return state
+
+}
+
+
+
+let initialvalue=0
+
+
+let [currentvalue,dispatch]=useReducer(reducer,initialvalue)
+
+
+
+
 
 
 // usecontext()
