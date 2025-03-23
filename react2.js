@@ -38,8 +38,8 @@
 // aur isko parent component me import karte he taki jo child componenet he uski position ke liye ke kaha par rakhna he
 
 
-// axious
-// axious ye bhi fetch ki tarah hota he bas isse asaan hojata he data ko lena 
+// axios.get()
+// axios ye bhi fetch ki tarah hota he bas isse asaan hojata he data ko lena 
 
 
 

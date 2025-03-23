@@ -203,17 +203,21 @@ let [currentvalue,dispatch]=useReducer(reducer,initialvalue)
 
 
 
-// usecontext()
-
-
-
-
 // contextapi
 // context provider aur consumer in teeno ko mila kar hi contextapi banta he
+// sabse phele createcontext() method ko react library se import karte he fir usko kisi variable me store karte he
+// fir us variable ko component ke andar provider ke saath use karte he fir usme value likhte he ese <name.provider value={}></name.provider>
+// aur fir usko export karte he export karte he ese export {name} fir isko import karte he jaha par bhi use karna he
+// fir usko component me .consumer lagake function banate he aur us function ki parameter me value ko use karte he
 
 
 
+// usecontext()
+// ye bhi contextapi ki tarah hota he bas isme consumer function ki jagah usecontext() hook ka use karte he
 
+
+
+// redux and redux toolkit
 
 
 
