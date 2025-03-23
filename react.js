@@ -216,10 +216,13 @@ let [currentvalue,dispatch]=useReducer(reducer,initialvalue)
 // ye bhi contextapi ki tarah hota he bas isme consumer function ki jagah usecontext() hook ka use karte he
 
 
+// use()
+// ye pura usecontext() hook ki tarah hota he bas isko conditionally bhi use kar sakte he
+
+
 
 // redux and redux toolkit
-
-
+// ye react se alag hota he lekin iska use react me karte he state ko manage karne ke liye
 
 
 

@@ -7,7 +7,12 @@
 // aur agar class ka name hyphen ke saath he to ese use karenge name["nav-container"] 
 
 
+// redux and redux toolkit
+// ye react se alag hota he lekin iska use react me karte he state ko manage karne ke liye
 
+
+// axios.get()
+// axios ye bhi fetch ki tarah hota he bas isse asaan hojata he data ko lena 
 
 
 // React Router
@@ -38,8 +43,12 @@
 // aur isko parent component me import karte he taki jo child componenet he uski position ke liye ke kaha par rakhna he
 
 
-// axios.get()
-// axios ye bhi fetch ki tarah hota he bas isse asaan hojata he data ko lena 
+// usenavigate()
+// ye history object ki tarah hota he aur ye method return karta he to method ke andar jo bhi number dalte he utna piche chala jata he
+
+
+// userouteerror()
+// ye error page ko handle karta he
 
 
 
