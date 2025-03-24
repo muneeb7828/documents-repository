@@ -26,11 +26,14 @@
 // aur jis bhi component ko redirect karna he us page pe to us component ke andar Link ko import karna padta he ese import { Link } from 'react-router-dom'
 // aur link tag ko likhte he us tag pe jispe click karke page pe redirect karna he
 
+// Link tag ki tarah navLink tag bhi hota he vo bhi same kaam ata he
+// aur isme jab bhi click karte he to active class apne aap add ho jati he
+
 
 
 // useparams()
 // useparams() ye router ka hook hota he aur ye object return karta he aur iska use isliye karta he taki route ke path ko dynamic banane ke liye 
-// aur ye tabhi kaam aayga jab route me path /: ese likhenge aur iske baad jo bhi likhenge vo property ban jaygi aur browser ke location me jo / iske baad jo likhenge vo iski value ban ban jaygi
+// aur ye tabhi kaam aayga jab route me path /: ese likhenge aur iske baad jo bhi likhenge vo property ban jaygi aur browser ke location me jo / iske baad jo likhenge vo iski value ban jaygi
 
 
 
@@ -47,8 +50,21 @@
 // ye history object ki tarah hota he aur ye method return karta he to method ke andar jo bhi number dalte he utna piche chala jata he
 
 
-// userouteerror()
+// useRouteError()
 // ye error page ko handle karta he
+// aur jo route me path dete he waha agar ye path de to "*" to error page ko dikhata he
+
+
+
+// get fetch api with loader and useLoaderData() hook
+
+// loader
+// is property ko route tag me use karte he aur iski value me component likhte he to jo bhi return hota he component me vo is property me ajata he
+
+// useLoaderData()
+// aur fit route me jo element he usme useLoaderData() hook ka use karke uski value get kar sakte he
+
+
 
 
 

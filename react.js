@@ -221,9 +221,6 @@ let [currentvalue,dispatch]=useReducer(reducer,initialvalue)
 
 
 
-// redux and redux toolkit
-// ye react se alag hota he lekin iska use react me karte he state ko manage karne ke liye
-
 
 
 
