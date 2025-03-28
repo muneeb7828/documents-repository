@@ -67,6 +67,9 @@
 
 
 // usenavigation()
+// is ka use loader me karte he isme bohot saari property hoti he lekin state property main hoti he iske andar 1 value hoti jo ke change hoti rehti he idle loader submit
+
+
 
 
 // ENV variables
@@ -76,11 +79,14 @@
 
 
 
+// regular expression
 
 
 
 
-
+// Pagination
+// Pagination vo hoti he jiska use isliye karte he taki ek baar pura data nahi ajay jiske computer load padega aur user interface kharab hoga 
+// iska use karte start aur limit daal sakte he url link pe jisse utne hi numbers ka data dikhega us page pe
 
 
 
