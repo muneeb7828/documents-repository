@@ -89,6 +89,25 @@
 // iska use karte start aur limit daal sakte he url link pe jisse utne hi numbers ka data dikhega us page pe
 
 
+// ...obj isko {} isme likho to pura obj ki property copy ho jati he
+
+// Date.now() iska use karke current time get kar sakte he iske liye phele movement library ko install karna padta he
+// aur isko format(Date.now)={dddd} likhne se date format me ho jati he
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

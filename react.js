@@ -209,15 +209,51 @@ let [currentvalue,dispatch]=useReducer(reducer,initialvalue)
 // fir us variable ko component ke andar provider ke saath use karte he fir usme value likhte he ese <name.provider value={}></name.provider>
 // aur fir usko export karte he export karte he ese export {name} fir isko import karte he jaha par bhi use karna he
 // fir usko component me .consumer lagake function banate he aur us function ki parameter me value ko use karte he
+// aur context provider me jo children dete he bas usi me value ko use kar sakte he
+
+
+// let contextt=React.createContext()
+
+// const Approvider=()=>{
+
+
+// return (
+// <contextt.Provider value={"what is your name"}>{<Search/>}</contextt.Provider>
+// )
+
+// }
+
+
+// let Globalcon=()=>{
+// return useContext(contextt)  
+// }
+
+
+// export {Approvider,contextt,Globalcon}
+
+
+// is tarike se context api aur createContext ka use kar sakte he
 
 
 
 // usecontext()
 // ye bhi contextapi ki tarah hota he bas isme consumer function ki jagah usecontext() hook ka use karte he
 
+// let data=useContext(contextt)
+
 
 // use()
 // ye pura usecontext() hook ki tarah hota he bas isko conditionally bhi use kar sakte he
+
+
+
+// custom hook
+
+// let Globalcon=()=>{
+// return useContext(contextt)      
+// }
+
+// is tarike se custom hook bana sakte he aur fir isko export karke use kar sakte he
 
 
 
