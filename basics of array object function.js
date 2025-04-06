@@ -945,3 +945,6 @@ console.log(daa)
 
 // window.navigator.clipboard.writeText(password)
 // isse copy kar sakte he kisi bhi cheez ko
+
+
+

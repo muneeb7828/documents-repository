@@ -95,12 +95,13 @@
 // aur isko format(Date.now)={dddd} likhne se date format me ho jati he
 
 
+// react-icons 
+// react-icons is library se bohot saare icons import kar sakte he
 
+ 
 
-
-
-
-
+// let date=new Date().toLocaleDateString()  
+// let time=new Date().toLocaleTimeString() 
 
 
 
