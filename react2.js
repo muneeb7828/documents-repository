@@ -63,7 +63,7 @@
 // is property ko route tag me use karte he aur iski value me component likhte he to jo bhi return hota he component me vo is property me ajata he
 
 // useLoaderData()
-// aur fit route me jo element he usme useLoaderData() hook ka use karke uski value get kar sakte he
+// aur fir route me jo element he usme useLoaderData() hook ka use karke uski value get kar sakte he
 
 
 // usenavigation()
@@ -73,13 +73,10 @@
 
 
 // ENV variables
-// ye bas vite react me hi chalti iska use karte data ko chupa sakte he sabse phele .evn file banini padti he folder me sabse niche
+// ye bas vite react me hi chalti iska use karke data ko chupa sakte he sabse phele .evn file banini padti he folder me sabse niche
 // aur fir VITE_ ye karke variable banate he ye he iska systax VITE_data="" isme likhke fir is file ko kahi bhi use kar sakte he
 // aur ye likhke fir isko import karna hota he jaha par bhi use karna he ese import.meta.env.data 
 
-
-
-// regular expression
 
 
 

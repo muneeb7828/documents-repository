@@ -9,7 +9,8 @@
 // npx
 // npx ye bhi npm ki tarah hota he bas ye ek baar chalta he
 
-
+// agar npm work nahi kar raha to ye command likhenge
+// Set-Executionpolicy -scope CurrentUser Unrestricted  
 
 
 // topics of react:-
