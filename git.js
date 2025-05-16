@@ -47,7 +47,7 @@
 // GIT and GITHUB
 
 // aur git ham isliye use karte he kyuki agar ham chate he ki jo hamne file banai he usko baad me ham kuch kare to us file ko kuch nahi ho 
-// vo vesa hi rahe jab tab naya wala save na kare
+// vo vesa hi rahe jab tak naya wala save na kare
 // aur git checkpoints ki tarah hota he matlab ki jo naya kiya vo save na ho purana wala hi rahe usi ko checkpoints bolte he
 
 // aur git ka ek terminal hota he gibash jiska use karke ham git aur github chalate he 
@@ -56,7 +56,7 @@
 
 // folder directory repository ye sab same hote he
 
-// git me folder ko repository bolte he
+// git hub me folder ko repository bolte he
 
 
 
@@ -76,7 +76,7 @@
 
 // sabse phele git init kiya fir working directory choose kari
 // fir ham usko add kiya git add se fir git add karne se vo staging area me chala jata he
-// fir ham usko commit karte he aur commit karne se repo pe chale jate he
+// fir ham usko commit karte he aur commit karne se checkpoint lag jata he
 // aur fir usko git hub pe push kar dete he
 
 
@@ -172,7 +172,7 @@
 
 
 // git restore
-// git restore isse working directory se jo staging area me add thi vo ho jati he
+// git restore isse working directory se jo staging area me add thi vo wapas working directory me chali jati he
 
 
 

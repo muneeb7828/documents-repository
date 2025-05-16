@@ -923,7 +923,7 @@ return a=="banana"
 
 console.log(daa)
 
-
+// Object.keys() iske andar object dalte he to unke total number of keys return karta he
 
 // eval()
 // ye string ko code me convert karta he aur calculate kar deta he

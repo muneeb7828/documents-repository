@@ -96,7 +96,7 @@
 
 // aur uncontrolled component vo hote he jo react handle nahi kar raha jese dom se value get karna ya useref ka use karke value get karna etc
 
-
+// aur react me variable jab bhi declare karte he to un ka type batana zaruri hota he
 
 
 // hooks
