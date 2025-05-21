@@ -326,8 +326,8 @@
 // git push origin newbranch:newbranch1
 // isse branch select kar sakte he git hub pe
 
-
-
+// git pull origin main
+// ye command update kar deta he folder ko
 
 
 // Git hub:-
