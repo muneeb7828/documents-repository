@@ -79,6 +79,10 @@
 // fir ham usko commit karte he aur commit karne se checkpoint lag jata he
 // aur fir usko git hub pe push kar dete he
 
+// working directory
+// staging area 
+// commit 
+// 
 
 
 // commonds in git 
@@ -115,7 +119,7 @@
 // isme jo dot hota he uska matlab hota he saari 
 // isse saari files ek baar me add kar sakte he
 
-// git add -A 
+// git add --A 
 // isse bhi saari files ek baar me add ho jati he
 
 // git rm --cached filename  to unstage
@@ -297,6 +301,9 @@
 // git branch -d branchname
 // isse jo bhi branch add kari he vo delete ho jati he agar vo merge kardi to
 // nahi to -D capital me likhna hoga usse jesi bhi hogi delete ho jaygi
+
+// git push origin --delete master
+// is command se github pe branch delete ho jati he
 
 
 // git branch -v
