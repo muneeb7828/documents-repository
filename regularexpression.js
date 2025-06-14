@@ -11,7 +11,7 @@
 
 // g=global matlab pure line me jaha bhi same word hoga unsab ko target karega
 // i=case insenstive matlab ke agar uperlatter ki jagah lowerlatter likha he to usko usko bhi lelega
-// m=multiline matlab ke agar ek line pe ho raha to iska use karenge to multiple lines me bhi target karega
+// m=multiline matlab ke agar ek line pe target ho raha to iska use karenge to multiple lines me bhi target karega
 // s=singleline matlab isse bas single ko hi target karega
 
 // ye hote he flags inko sabse aakhri me likhte he
@@ -28,9 +28,9 @@
 // \d= ye digit ke liye hota he
 // \s= ye whitespace ke liye hota he
 // \W= Not word @#$%
-// \D= Not dogit
+// \D= Not digit
 // \S= Not whitespace
-// [abc]= isse iske andar jitne bhi word hote he un sabko select kar leta he
+// [abc]= isse iske andar jitne bhi letter match karenga usko select kar leta he
 // [^abc]= ye nahi select karne ke liye hota he 
 // [a-g]= isse a to g koi sa bhi word select ho jayga
 
@@ -79,8 +79,8 @@ let regex2=/^[a-zA-z1-9@#$%^0]{8,}@gmail.com$/.test(variable)
 
 // .test() ye bolean return karta he
 // .source() ye regular expression ke andar ka content batata he
-// .exec() ye check karne ke kaam ata he agar word string me he to usko array me return karta he agara nahi he to null return karta he
+// .exec() ye check karne ke kaam ata he agar word string me he to usko array me return karta he agar nahi he to null return karta he
 //  aur agar word ek se zada he to phele wala ka hi index return karega agar g flag lagalenge to sab ka index return karega 
 // variable.match(reg) ye array aur null return karta he
-// variable.search(reg) ye index return karata agar vo he to nahi to -1 return karta he
+// variable.search(reg) ye index return karta agar vo he to nahi to -1 return karta he
 
