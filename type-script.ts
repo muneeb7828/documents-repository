@@ -97,12 +97,83 @@ var num=Number(stirng)
 // type inference wih number
 // inference matlab andaza lagana agar variable ke sath datatype define nahi kiya to bhi ye pata laga leta he data type isi ko type inference bolte he
 
-
 // Object types
+// is tarike object ke datatypes define kar sakte he lekin isme baad me koi property add nahi kar sakte
+var userdata:{name:string,age:number,company:string}={
+ name:'hamza',
+ age:20,
+ company:'mecaps'   
+}
+// agar baad me bhi key add karna he to ye karenge
+var userdata2:{[key:string]:string|number|[]}={
+ name:'hamza',
+ age:20,
+ company:'mecaps'   
+}
+
+// interface
+// is tarike se interface bana sakte he isse ye fayda rehta he ki ek baar interface banake alag alag object me use kar sakte he
+
+interface info{
+    name:string,
+    age:number,
+    colledge:string,   
+}
+
+
+
+var student:info={
+ name:"muneeb",   
+ age:24,
+ colledge:"all saints"
+}
+
+// isme lekin alag koi key add nahi kar sakte to uske liye interface banake extends karna padta he 
+
+interface extrainfo extends info {
+ subject:string   
+}
+
+var student2:extrainfo={
+name:"hamza",   
+age:20,
+colledge:"all saints",
+subject:"asas"
+}
+
+// intersection types
+// ye allow karte multiple datatypes ko combine karne ke liye
+
+
+
+// any 
+// any datatype tab use karte jab hame variable me sare datatype rakhna ho lekin ese nahi karte kyuki typescript he hi isliye variable ka datatype define karne ke liye
+
+// unknown
+// unknown datatype bhi any ki tarah hota he lekin isme koisa bhi datatype daaldo to bhi datatype unknown hi hota he
+// aur isko condition me use karte he
+
+// array datatype
+// typescript me array same datatype hi leta he agar multiple datatype dete he to hota to array hi he lekin usko tuple bolte he
+   const number=[1,2,3,4,"wddswd"]
+
+// funtion datatype 
+// typescript me fucntion ke parameters ka datatype ese define karte he aur jo text he isme jab bhi value aaygi vo string ya number hi hogi aur jo string | number likha he isko union bolte he
+
+function totalprice(item:number,price:number,text?:string|number){
+ if(typeof text=='string'){
+    console.log(text,price*item)
+}else{
+  console.log(price*item) 
+}
+}
+
+totalprice(100,20)
+
+
 // Special types
 // Advanced types 
 // Function types
-
 
 
 
@@ -119,7 +190,12 @@ var num=Number(stirng)
 // convert all ts file to js together
 // tsc     is command se ek baar me hi saari files js me convert hojati he
 
+
 // fix errors after config
+
+// is tarike se value get karte he html se
+// const usernameInput=document.getElementById("username") as HTMLInputElement
+// const username:string=usernameInput.value
 
 
 

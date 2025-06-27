@@ -948,3 +948,33 @@ console.log(daa)
 
 
 
+// sort method in javacript
+ 
+// simple sorting
+// sort() ye kya karta he phele ye values ko string me convert karta he fir secuence check hota he utf16 ke hisab se 
+// aur agar array me uperlater aur lowerlater dono word hue to phele ye upperlater ko arrange karega fir lowerlater ko arrange karega  aur ye number me kaam nahi karta to number ko sort karne ke liye advance sorting karni padti he
+const strs=["d","a","c","e","B","A","C","b","g","f","i","h"]
+
+console.log(strs.sort())
+
+// advance sorting 
+// advance sorting me kya hota he ki ye ek callback function leta he jiske andar 2 parameter dene padte he fir agar decending to acending values chahiye to first param - second param karna padta he jisse vo compare karta he agar value negetive me arahi he to vo ese hi rehne deta he agar positive he to swap kar leta aur agar second param - first param karte he to acending to decending me value deta he
+
+const number=[23,452,3,4,2,31,5,53,21,3,12,1]
+
+console.log(number.sort());
+
+number.sort((a,b)=>{
+return a-b    
+})
+
+console.log(number)
+
+
+
+
+
+
+
+
+

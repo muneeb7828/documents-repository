@@ -47,7 +47,7 @@
 
 
 // usenavigate()
-// ye history object ki tarah hota he aur ye method return karta he to method ke andar jo bhi number dalte he utna piche chala jata he
+// ye history object ki tarah hota he aur ye method hota he to method ke andar jo bhi number dalte he utna piche chala jata he
 
 
 // useRouteError()
@@ -83,7 +83,7 @@
 
 // Pagination
 // Pagination vo hoti he jiska use isliye karte he taki ek baar pura data nahi ajay jiske computer load padega aur user interface kharab hoga 
-// iska use karte start aur limit daal sakte he url link pe jisse utne hi numbers ka data dikhega us page pe
+// iska use karke start aur limit daal sakte he url link pe jisse utne hi numbers ka data dikhega us page pe
 
 
 // ...obj isko {} isme likho to pura obj ki property copy ho jati he

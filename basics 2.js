@@ -79,7 +79,7 @@ console.log(word.includes("muneeb"))
 console.log(word.startsWith("heloo"));
 
 
-// .search() ye batata he jo word check kar rahe ho vo word konse number se shuru ho raha he aur vo number print hoga
+// .search() ye batata he jo word check kar rahe ho vo word konse index se shuru ho raha he aur vo index print hoga
 
 // .indexOf() ye .search() ki tarah hota he jo word check kar rahe ho vo word konse number se shuru ho raha he aur vo number print hoga 
 
@@ -172,7 +172,7 @@ console.log(abb);
 // hoisting and temporal dead zone.
 
 // hoisting vo hoti he jo declare hone se phele console.log() kare to yani var a baad me declare kar rahe he aur console.log() phele likh rahe he to agar phele likh rahe he to isme kya hoga ke agar aapka variable var he to ye console.log() pe yeto show hoga ki variable to declare hua he lekin vo undifind show hoga bhalehi aap use assign karo ya nahi kyuki assign to aapko phele hi likhna padhega print karne se phele 
-// magar function apan baadme banate he aur console.log() usse phele likhte he to ye chal jatahe function matlab only function declaration hi chalega aur koisa nahi kyuki ecma script se phele sirf global scope tha aur function scope tha aur ecma script 2015 me launch hone ke baad let aur const naam ke variable bane jo ke sirf block scope ke liye bane to isiliye var variable chal jayega aur isse apan hoisting bolenge and let aur const nahi chalega to ise temporal dead zone.
+// magar function apan baadme banate he aur console.log() usse phele likhte he to ye chal jatahe function matlab sirf function declaration hi chalega aur koisa nahi kyuki ecma script se phele sirf global scope tha aur function scope tha aur ecma script 2015 me launch hone ke baad let aur const naam ke variable bane jo ke sirf block scope ke liye bane to isiliye var variable chal jayega aur isse apan hoisting bolenge and let aur const nahi chalega to ise temporal dead zone.
 // Temporal dead zone vo hote he jo hoisting nahi hote for example let and const aur vo sabhi var aur function declaration ko chorke sabhi temporal dead zone he.   
 
 
@@ -233,7 +233,7 @@ console.log(abb);
 // for of loop value ke liye hota he jo apan variable banate he usme jo value store hoti he jese koi string ya boolean ya koi bhi data type to usko intex me convert kar deta he aur jo bhi value hoti he us ko dikha deta he.
 
 // for of loop in array 
-// array me  jab for of loop lagate he to jaha bhi , koma laga hota he us poori value ko ek intex maanta he aur jo bhi us intex pe value likhi he us value ko likha deta he aur jitne bhi value (datatype) ke baad ,koma laga hota un sabhi ko di khata he.
+// array me  jab for of loop lagate he to jaha bhi , koma laga hota he us poori value ko ek index maanta he aur jo bhi us index pe value likhi he us value ko likha deta he aur jitne bhi value ke baad ,koma laga hota un sabhi ko di khata he.
 
 // for in loop
 // for in loop basically object ke liye hota he usme ye object ki andar jo property hoti he usko dikhata he aur agar apan us variable ko jo apan loop me chala rahe he usko object ka name likh ke usko []square brackets ke andar likhenge to usse object ki andar jo property he uski jo value he vo bhi dikha dega.
@@ -275,7 +275,7 @@ console.log(abb);
 
 // swich case
 // swich case conditional statement hota he ye if, esle if ki tarah hota he bas isme phele swich likhte he aur fir () parenthesis banate he aur uske andar variable ya key kaam likhte he uske baad curly brackets banate he aur usme case likhte he aur ke baad contition likhte he bager kisi brackets ke uske baad :colon lagate he fir uske niche console.log() fir break likhte he agar break nahi likha aur condition true hogai to uske niche jitne bhi case he vo sab print honge 
-// aur last me default likhte ye esle ki tarah hota he.
+// aur last me default likhte ye else ki tarah hota he.
 // aur apan bohot saare case saath me likh sakte he ek ke niche ek. 
 // agar switch case me mujhe comparison check karna he for exp a>b, b>a and more to mujhe switch ke baad () perenthisis me true likhna padega tabhi vo comparison karke sahi answer dega.
 
@@ -331,20 +331,20 @@ console.log(g+" "+array[g])
 
 // array methods
 
-// tOString(),join(),pop(),push(),shift(),unshift(),concat(),flat(),splice(),slice(),find(),findIndex()
+// toString(),join(),pop(),push(),shift(),unshift(),concat(),flat(),splice(),slice(),find(),findIndex()
 // pop() se last ki value bahar chalejati he
 // puch() se last me value add kar sakte he
 // shift() se shuru ki value bahar chalejati he
 // unshift() se shuru me value add kar sakte he
 // flat() ye ek array ke andar jitne bhi array hote he unsab ko jod ke ek hi array kar deta he magar isko dusre variable me daalna padhta he.
 // concat() ye ek array ko dusre array se concat kar deta he magar isko dusre variable me daalna padhta he.
-// tOString() ye pure array ko string me convert kar deta he magar isko dusre variable me daalna padhta he.
+// toString() ye pure array ko string me convert kar deta he magar isko dusre variable me daalna padhta he.
 // join() ye pure array ko string me convert kar deta he
-// slice() ye bhi string method ki tarah same kaam karta he array me bhi.ye kya 2 parameters pe kaam karta he phela jo aapko dekhna he word vo konse intex se shuru hua he vo intex dalna padte he phele parameters pe aur jo dusra parameter rehta he vo rehta he aapko kaha tak dikhana he vo intex dalo.
+// slice() ye kya 2 parameters pe kaam karta he phela jo aapko dekhna he word vo konse intex se shuru hua he vo intex dalna padte he phele parameters pe aur jo dusra parameter rehta he vo rehta he aapko kaha tak dikhana he vo intex dalo.
 // splice() ye bohot saare parameters pe kaam karta he bas shuru ke 3 parameters main hote he 1 parameter rehta he aapko konsa word select karna he vo intex dalo aur 2 parameter rehta he vahase kitne hatana he vo intex dalo agar nahi hatana to zero dalo aur 3 parameter ya uske baad jitne bhi parameter he unsab me aap kuch bhi add kar sakte ho string ya variable kuch bhi.
 // find() ye kya karta he ke aapne array bananya aur baadme aapko check karna he ki aapne jo array banaya tha usme kya ye value thi agar thi to usko dikhata he ye find() function agar nahi thi to undefined show karta he 
 // aur iska syntax esa rehta he find((v)=>v=="muneeb") 
-// findIndex() ye bhi find() ki tarah hota he bas ye uska intex batata he ki vo value konse intex pe he.
+// findIndex() ye bhi find() ki tarah hota he bas ye uska index batata he ki vo value konse index pe he.
 
 
 
