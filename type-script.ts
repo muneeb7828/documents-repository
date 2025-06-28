@@ -142,7 +142,30 @@ subject:"asas"
 }
 
 // intersection types
-// ye allow karte multiple datatypes ko combine karne ke liye
+// ye allow karte multiple datatypes ko combine karne ke liye is tarike se aur ye interface se alag hota he kyuki intersection types me union use kar sakte he interface me nahi kar sakte aur interface me extend use kar sakte he intersection types me nahi kar sakte  
+
+
+var persondata1:{name:string}={name:"muneeb"}   
+var persondata2:{age:number}={age:30}
+
+type personA={name:string}
+type personB={age:Number}
+type personc=personA & personB
+
+
+var persondataA:personA={name:"muneeb"}   
+var persondataB:personB={age:30}
+var persondataC:personc={name:"",age:12}
+
+// enum datatype 
+// isme agar ham chate he ki jo variable he usme vo wo hi value aay jo ham ne phele define kari he to iska use karenge
+
+enum whoType{
+  teacher="teacher",
+  management="mnagement",
+  labstaff="labstaff" 
+}
+var who:whoType=whoType.teacher 
 
 
 
