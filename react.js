@@ -64,8 +64,7 @@
 
 // export default and name export
 
-// export default ko ek baar hi import kar pate he
-// name export ko baar baar import kar sakte he
+// export default jab karte he to uska name kuch bhi rakh sakte he lekin jab name export karte he to name change nahi kar sakte
 
 
 // props in react

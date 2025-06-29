@@ -128,7 +128,7 @@ var student:info={
  colledge:"all saints"
 }
 
-// isme lekin alag koi key add nahi kar sakte to uske liye interface banake extends karna padta he 
+// isme lekin alag se koi key add nahi kar sakte to uske liye interface banake extends karna padta he 
 
 interface extrainfo extends info {
  subject:string   
@@ -155,10 +155,10 @@ type personc=personA & personB
 
 var persondataA:personA={name:"muneeb"}   
 var persondataB:personB={age:30}
-var persondataC:personc={name:"",age:12}
+var persondataC:personc={name:"",age:24}
 
 // enum datatype 
-// isme agar ham chate he ki jo variable he usme vo wo hi value aay jo ham ne phele define kari he to iska use karenge
+// isme agar ham chate he ki jo variable he usme vo hi value aay jo ham ne phele define kari he to iska use karenge
 
 enum whoType{
   teacher="teacher",
@@ -167,7 +167,8 @@ enum whoType{
 }
 var who:whoType=whoType.teacher 
 
-
+// void datatype
+// ye return nahi karta
 
 // any 
 // any datatype tab use karte jab hame variable me sare datatype rakhna ho lekin ese nahi karte kyuki typescript he hi isliye variable ka datatype define karne ke liye
@@ -192,6 +193,68 @@ function totalprice(item:number,price:number,text?:string|number){
 }
 
 totalprice(100,20)
+
+
+// class in ts
+
+class Product{
+private name:string
+  price:number
+  pId:number
+  inCart=false
+  isOrdered=false
+  constructor(name:string,price:number,pId:number){
+    this.name=name 
+    this.price=price
+    this.pId=pId
+  }  
+
+  addtocart(){
+   this.inCart=true
+  }
+
+  buyProduct(){
+  if(this.inCart){
+   return `product ${this.name} is order in ${this.price}` 
+  }
+  else{
+   return `no product in cart` 
+  }
+  }
+
+}
+
+
+var product1=new Product('sumsung',100000,101)
+
+console.log(product1)
+
+// inheritance in class
+
+class Order extends Product{
+
+constructor(){
+ super("iphone",40000,100) 
+}
+
+getprice(){
+ return this.price 
+}
+
+}
+
+var order=new Order()
+console.log(order.getprice())
+
+
+
+
+
+// access modifier
+// isme 3 cheez hoti he public, private, protected aur ye sab class me use kar sakte he aur ye js me nahi hoti
+// aur class me byDefault public modifier hi hota aur isko kahin par bhi use kar sakte he aur jo private modifier hota he usko kahin par bhi use nahi kar sakte aur jo protected modifier hota he usko bas child class me dekh sakte he
+
+
 
 
 // Special types
@@ -220,6 +283,111 @@ totalprice(100,20)
 // const usernameInput=document.getElementById("username") as HTMLInputElement
 // const username:string=usernameInput.value
 
+
+// modules in ts
+// modules ek file ko bolte he jisme interfaces ya function ya kuch aur bhi banake ke usko export default karte he fir jis bhi file me use karna he wana import karte he
+// aur ye koi si bhi file se kar sakte he 
+// isme jo details he ye import kiya he dusri file se
+
+// var obj2:details={
+// name:"muneeb",
+// age:24,
+// isgraduate:true,
+// address:"idgah hill bhopal" 
+// }
+
+
+// var obj3:details={
+// name:"hamza",
+// age:20,
+// isgraduate:false,
+// address:"shajanabad bhopal" 
+// }
+
+
+// get and set property in ts and js
+// get and set property se class ki property ki values ko get ya set kar sakte he
+// aur jo set property jab class me banate he to usme ek parameneter dena zaruri hota he jisme value ati he
+
+
+class Employee{
+       employeename_:string
+        employeeage_:number
+        employeesalary_:number
+  constructor(name:string,age:number,salary:number){
+        this.employeename_=name
+        this.employeeage_=age
+        this.employeesalary_=salary
+  }  
+
+  get employeename(){
+    return "MR. "+this.employeename_
+  }
+
+  set employeename(value:string){
+     this.employeename_="emp "+value
+  }
+
+
+}
+
+var employee1=new Employee("muneeb",24,40000)
+var employee2=new Employee("hamza",20,41000)
+
+console.log(employee1.employeename)
+
+employee1.employeename="muneeb ur rehman"
+
+console.log(employee1.employeename)
+
+
+// interface in class
+// aur class me isko use karne ke implements keyword ka use karte he
+
+
+interface DepartmentDatatype{
+      Deparmentname:string
+      DeparmentId:number
+      DeparmentZone:string  
+      Departmentdetails():void
+}
+
+
+class Department implements DepartmentDatatype{
+       Deparmentname
+        DeparmentId
+        DeparmentZone
+  constructor(name:string,deptId:number,DeptZone:string){
+        this.Deparmentname=name
+        this.DeparmentId=deptId
+        this.DeparmentZone=DeptZone
+  }  
+  Departmentdetails(){
+    console.log(`This is details of ${this.Deparmentname} departmentId = ${this.DeparmentId} departmentZone = ${this.DeparmentZone} `);
+  }
+
+}
+
+var deparment1= new Department("HR",100,"bhopal")
+var deparment2= new Department("Marketing",101,"indore")
+var deparment3= new Department("IT",102,"mumbai")
+
+
+deparment1.Departmentdetails()
+
+
+// static keyword in class
+// static keyword lagane se kisi bhi property ya method se phele to vo proerty ya method sirf class se hi access hogi instance se nahi hogi
+// aur js me bhi hoti he
+
+
+class Company{
+ static name:string="Google"
+}
+
+var c1 =new Company()
+
+console.log(Company.name);
 
 
 
