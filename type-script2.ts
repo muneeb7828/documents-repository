@@ -98,7 +98,7 @@ function checkDetails(data: Order1| Product1){
 }
 
 var p1=new Product1()
-var o1=new Order()
+var o1=new Order1()
 
 checkDetails(p1)
 
