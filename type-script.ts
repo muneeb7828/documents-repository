@@ -33,6 +33,7 @@
 
 // TypeScript is a better version of javascript
 // aur typeScript superset of js
+// aur ye ek programming language he 
 
 // superset
 // superset vo hota he kisi jese kisi ek cheez saari features hote aur sath me aur feature hote he
@@ -71,7 +72,7 @@ var age:number=24
 // primitive types
 // number,string,boolean,null,undefined,bigint,symbol
 // bigint tab use karte he jab number bohot bata hota he  
-   var bignumber=92390239232323400n         // ye number he isme agar koisa number add kar rahe he to add nahi ho raha taki ek limit ke baad ye add nahi hota to iske liye bigint k a use karenge last me n lagake   
+   var bignumber=92390239232323400n         // ye number he isme agar koisa number add kar rahe he to add nahi ho raha taki ek limit ke baad ye add nahi hota to iske liye bigint ka use karenge last me n lagake   
    var x=1n;
    console.log(bignumber+x)
    
@@ -95,7 +96,7 @@ var stirng="100"
 var num=Number(stirng)
 
 // type inference wih number
-// inference matlab andaza lagana agar variable ke sath datatype define nahi kiya to bhi ye pata laga leta he data type isi ko type inference bolte he
+// inference matlab andaza lagana agar variable ke sath datatype define nahi kiya to bhi ye pata laga leta he data type ka isi ko type inference bolte he
 
 // Object types
 // is tarike object ke datatypes define kar sakte he lekin isme baad me koi property add nahi kar sakte
@@ -129,7 +130,7 @@ var student:info={
  colledge:"all saints"
 }
 
-// isme lekin alag se koi key add nahi kar sakte to uske liye interface banake extends karna padta he 
+// isme lekin alag se koi key add nahi kar sakte to uske liye ek interface banake extends karna padta he 
 
 interface extrainfo extends info {
  subject:string   
@@ -183,7 +184,7 @@ var who:whoType=whoType.teacher
    const number=[1,2,3,4,"wddswd"]
 
 // funtion datatype 
-// typescript me fucntion ke parameters ka datatype ese define karte he aur jo text he isme jab bhi value aaygi vo string ya number hi hogi aur jo string | number likha he isko union bolte he
+// typescript me function ke parameters ka datatype ese define karte he aur jo text he isme jab bhi value aaygi vo string ya number hi hogi aur jo string | number likha he isko union bolte he
 
 function totalprice(item:number,price:number,text?:string|number){
  if(typeof text=='string'){
@@ -204,9 +205,9 @@ private name:string
   pId:number
   inCart=false
   isOrdered=false
-  constructor(name:string,price:number,pId:number){
+  constructor(name:string,pr:number,pId:number){
     this.name=name 
-    this.price=price
+    this.price=pr
     this.pId=pId
   }  
 
@@ -249,13 +250,9 @@ console.log(order.getprice())
 
 
 
-
-
 // access modifier
 // isme 3 cheez hoti he public, private, protected aur ye sab class me use kar sakte he aur ye js me nahi hoti
 // aur class me byDefault public modifier hi hota aur isko kahin par bhi use kar sakte he aur jo private modifier hota he usko kahin par bhi use nahi kar sakte aur jo protected modifier hota he usko bas child class me dekh sakte he
-
-
 
 
 // Special types
@@ -265,20 +262,24 @@ console.log(order.getprice())
 
 
 // tsc configuration file
+// iska use isliye karte he jab ts file ko js file me convert karte he to iska use karte he aur isme bohot sari proerties hoti he jo ke ts file me kaam ati he
 
 // how to generate config file
 // tsc --init   is command se generate hote he config file
 
-// use of coding file
-
 // "target": "es2024",   
 // tsconfig file me ek property hoti he target name se ye is liye hoti he ke aap konsa version use kar rahe echma script ka ts ko js me convert karne ke liye
+
+
+// use of coding file
 
 // convert all ts file to js together
 // tsc     is command se ek baar me hi saari files js me convert hojati he
 
-
 // fix errors after config
+
+
+
 
 // is tarike se value get karte he html se
 const usernameInput=document.getElementById("username") as HTMLInputElement
@@ -309,7 +310,7 @@ const username:string=usernameInput.value
 // get and set property in ts and js
 // get and set property se class ki property ki values ko get ya set kar sakte he
 // aur jo set property jab class me banate he to usme ek parameneter dena zaruri hota he jisme value ati he
-
+// aur ye js me bhi hoti he
 
 class Employee{
        employeename_:string
@@ -340,238 +341,6 @@ console.log(employee1.employeename)
 employee1.employeename="muneeb ur rehman"
 
 console.log(employee1.employeename)
-
-
-// interface in class
-// aur class me isko use karne ke implements keyword ka use karte he
-
-
-interface DepartmentDatatype{
-      Deparmentname:string
-      DeparmentId:number
-      DeparmentZone:string  
-      Departmentdetails():void
-}
-
-
-class Department implements DepartmentDatatype{
-       Deparmentname
-        DeparmentId
-        DeparmentZone
-  constructor(name:string,deptId:number,DeptZone:string){
-        this.Deparmentname=name
-        this.DeparmentId=deptId
-        this.DeparmentZone=DeptZone
-  }  
-  Departmentdetails(){
-    console.log(`This is details of ${this.Deparmentname} departmentId = ${this.DeparmentId} departmentZone = ${this.DeparmentZone} `);
-  }
-
-}
-
-var deparment1= new Department("HR",100,"bhopal")
-var deparment2= new Department("Marketing",101,"indore")
-var deparment3= new Department("IT",102,"mumbai")
-
-
-deparment1.Departmentdetails()
-
-
-// static keyword in class
-// static keyword lagane se kisi bhi property ya method se phele to vo proerty ya method sirf class se hi access hogi instance se nahi hogi
-// aur js me bhi hoti he
-
-
-class Company{
- static name:string="Google"
-}
-
-var c1 =new Company()
-
-console.log(Company.name);
-
-
-// typeguard in ts
-// ye kya karta he ki variable ka actual datatype batata he
-// iski 3 types hote he typeof(),instanceof(),custom Type()
-
-// typeof()
-// jab bhi kisi variable ka datatype dekhna ho to iska use karte he
-
-// instanceof()
-// jab bhi kisi instance ki class dekhna ho to iska use karte he
-
-
-// by typeof()
-
-var userdata1:number|string|boolean
-
-userdata1='sds'
-if(typeof(userdata1)=="boolean"){
-  console.log('this is a boolean datatype');
-}
-else if(typeof(userdata1)=="string"){
-console.log('this is a string datatype');
-userdata1
-}
-else{
-console.log('this is a number datatype'); 
-userdata1
-}
-
-
-// by instanceof()
-
-class Product1 {
-
-}
-
-class Order1 {
-
-}
-
-
-function checkDetails(data: Order1| Product1){
-    if(data instanceof Order1){
-      console.log('this is order')
-    }
-    else{
-      console.log('this is product')
-    }
-}
-
-var p1=new Product1()
-var o1=new Order()
-
-checkDetails(p1)
-
-
-// generic in ts
-// ye tab use karte he jab same datatype ki value ko return karna ho
-// aur isme T ka matlab he sare datatypes 
-
-
-function fruits<T>(name:T):T{
-return name
-}
-
-var onlyfruit=fruits("apple")
-var onlynum=fruits(12)
-
-
-// keyof operator in ts
-// iska use karne se jo type ki jo keys he bas vo hi lega uske alava kuch aur nahi lega matlab name, age, isEmp ye hi likh sakte he
-
-type personT={
-name:string,
-age:string,
-isEmp:true, 
-}
-
-type personX=keyof personT
-
-let persondataX:personX="name"
-
-
-// index signature
-// isme kitni bhi keys add kar sakte he
-
-type userdata2={
-  name:string,
-  age:number,
-  mobile:number
-  [key:string]:number|string
-}
-
-var user1:userdata2={
-  name:"muneeb",
-  age:24,
-  mobile:8269527774,
-  address:"idgah hills bhopal"
-}
-
-
-// utility
-// ye ts ke andar predefined types hoti jo ke madad karti he types ko manipulate karne me
-// isme kya hota he ki jo ham types banate he usme jese ham khali 2 property use karna he ya puri nahi karna aur ya hame usko readonly banana he matlab ke jab object banay tab hi use kar pay baad me add nahi kar pay to iska use karenge
-
-// utility types in ts
-// partial, Required, Readonly, Pick,Omit,Exclude,Extract,NamNullable,Record
-
-interface colledgetype{
-  name:string,
-  location:string,
-  students:number,
-  branch?:number
-}
-
-// partial iska use tab karte he jab hame types saari properties use nahi karni ho
-var colledgedata1:Partial<colledgetype>={
-  name:'iit delhi',
-  location:'delhi',
-}
-
-function getcollegedata(data:Partial<colledgetype>){
-return data
-}
-
-getcollegedata({name:"iit bombay"})
-
-
-// Required 
-// isme optional property bhi deni padti he
-function getcollegedata2(data:Required<colledgetype>){
-return data
-}
-
-getcollegedata2({name:"iit bombay",location:"asasas",students:12,branch:12})
-
-
-// readonly
-// iska use tab karte jab object banay tabhi use karpay baad me add nahi ho
-
-// Omit iska use tab karte jab type ya interface ki koisi property use nahi karni ho to
-
-var colledgedata3:Omit<colledgetype,"students" | "location">={
-name:"sdsd",
-branch:1212
-}
-
-// Exclude 
-// iska use karne se jo value type me di vo bhi use nahi kar sakte
-
-type ApiStatus='loading' | 'error' | 'pending' | 'success'     // isme bas ye values hi likh sakte he aur dusri nahi likh sakte
-
-var APICall:Exclude<ApiStatus,'pending'>
-APICall='success'
-
-// Extract
-// iska use tab karte he jab type kuch values hi chahiye
-
-var APICall2:Extract<ApiStatus,'loading' | 'success'>
-APICall2="success"
-
-
-type RandomType=string | number | undefined | null | string[] 
-
-// NonNullable iska use tab karte he jab null ya undefined nahi rakhna ho
-var randomData:NonNullable<RandomType>
-
-
-// Record
-// iska use tab karte he jab types ki values ko bhi object ki keys banani ho
-
-type siteRole="Admin" | "user" | 'guest'
-
-var RollName:Record<siteRole,string>={
-  Admin:"sasas",
-  user:"asas",
-  guest:'asas' 
-}
-
-
-
-
 
 
 
