@@ -2,7 +2,7 @@
 // css modules:-
 // jab bhi apan css file import karte he to vo global hoti he to isiliye css modules ka istemaal karte he taki har component ke liye ek diffrent css apply ho
 // aur jab bhi css module ki file banaenge to index.module.css ese bayenge 
-// aur jab isko import karenge to isko name dena padega aur jo name delge vo object ban jayga unsaari classes ka
+// aur jab isko import karenge to isko name dena padega aur jo name denge vo object ban jayga unsaari classes ka
 // to jab bhi hame css use karni hogi to name.classname karke karni hogi
 // aur agar class ka name hyphen ke saath he to ese use karenge name["nav-container"] 
 

@@ -285,5 +285,91 @@ class CustomMaths{
 
 var cm1=new CustomMaths(10,20)
 
+// use decorator to overwrite functions
+// ham class ke andar ke function ko overwrite isliye karte he kyuki baadme jese hame usme kuch change karna ho aur vo function durse jagah bhi use ho raho to isliye karte he
+
+function updateSum(target:any,key:string,descriptor:PropertyDescriptor){        // jo target he default parameter he ye aur jo key or property param he ye properties ke liye hoti he aur ye string hoti he aur jo 3 parameter he vo kuch bhi rakh sakte he lekin uska datatype PropertyDescriptor ye hona chahiye aur ye function ko describe karne ke liye hota he
+  descriptor.value=function sum(x:number,y:number){
+    let output=x+y
+    return  "the output of "+x+" and "+y+" is : " + output
+  }
+  
+}
+
+class CustomMaths2{
+
+// @updateSum               // jab bhi ese function ko overwrite karna hoto ts.config file me experimentalDecorators isko uncomment karna hoga
+sum(x:number,y:number){
+return x+y
+}
+
+}
+
+var cm2=new CustomMaths2()
+
+console.log(cm2.sum(10,30))
+
+
+
+// Typed with promise async await
+// aur ye isliye bhi use karte taki phele ek function chalne ke baad hi dusra function chale
+
+type resultType={
+ name:string,
+ id:number,
+ email:string 
+}
+
+
+
+function Complexlogic():Promise<resultType>{
+  return new Promise((resolve)=>{              // resolve matlab proper output milega aur reject error ke liye hota he aur jo bhi resolve me hoga vo .then() ke param me ajayga
+    setTimeout(() => {
+      resolve({
+ name:"muneeb",
+ id:10,
+ email:"muneeb@12345" 
+})
+    },2000);
+  })
+}
+
+
+function test2(){
+  console.log("test2")
+}
+
+Complexlogic().then((data:resultType)=>{
+  console.log(data)
+
+  test2()
+})
+
+// api call in type script
+
+type APIType={
+userId:string,
+id:number,
+title:string,
+completed:boolean  
+}
+
+
+
+async function apiCallHanding():Promise<APIType>{
+const result= await fetch('https://jsonplaceholder.typicode.com/todos/1')
+const data= await result.json()
+console.log(data)
+return data
+}
+
+apiCallHanding()
+
+
+
+
+
+
+
 
 
