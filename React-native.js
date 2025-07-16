@@ -23,17 +23,19 @@
 
 
 // react native with expo
-
 // iske liye expo go app install karna padta he phone me fir usko scan karna hota he tab dekh pate he phone me
 
 
 // is path pe android studio ki cheeze install he
 // C:\Users\Admin\AppData\Local\Android\Sdk
 
+// aur jab bhi emulator banay to medium se hi banay aur android 12,Api level 31 se banay kyuki ye space kam leta he
 
 // npx @react-native-community/cli init
 // aur ye command chalene ke baad npm install bhi karna padta he fir uske baad npx react-native run-android ye command chalate he
 
+// aur npx react-native run-android agar ye command chalane ke baad kuch error aay to ye command chalayenge
+// adb kill-server, adb start-server
 
 // isme jo tags hote he vo html ki tarah hote he lekin same nahi hote aur tags ko import karna padta he react native library se
 // aur isme tags ko components bolte he
@@ -117,45 +119,135 @@
 
 // start working project
 
-// isme bohot saari cheeze react js ki tarah hoti bas kuch chezien different hoti he jese css aur tags etc
+// isme bohot saari cheeze react js ki tarah hoti bas kuch chezien different hoti he jese css aur tags etc aur isme tags ko components bolte he jo ki import karne padte he react-native liberay se aur isme saare component upperletter se shuru hote he
+// aur isme onclick events nahi hote isme onpress events hote he
+
+// aur check karne ke liye React-Native folder ko dekhe
+
+// View component
+// view component hota he vo parent div ki tarah hota he aur jab jsx likhte he to view se hi wrap karte he aur isko khali button pe bhi wrap kar sakte he
+
+// Text component 
+// ye isliye hota he jese khuch text likhna ho to iska use karte he
+
+// Button component
+// isme button ko ese likhte he
+// <Button title='press here'></Button>
+
+// isme console.log nahi hota isme debugger hota he jisme error dekhte he
+// aur isme ek method hota he console.warn() ye console.log ki tarah kaam karta bas ye screen pe dikhata he
+
+// aur isme hooks same hote he react ki tarah isme bhi hooks ko react library se import karna padta he
+
+// aur isme props bhi same hi hote he
 
 
+// css in react-native
+
+// isme bhi 3 tarike se css karte he inline internal aur external
+// jab external file banate he to .js se banate he for exp index.js
 
 
+// is tarike internal styling karte he aur external bhi same hoti he bas usko export karna padta he aur isme px nahi hota
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+textstyle:{
+fontSize:20,
+backgroundColor:"black",
+}
+});
 
 
+// aur is tarike se isko use karte he
+{/* <Text style={styles.textstyle} >Hello World</Text> */}
+
+// aur agar ek se zada class use karna hoto ese karenge
+<Text style={[styles.textstyle,styles.container,{fontSize:10}]} >Hello World</Text>
 
 
+// isme is tarike se inputs likhte he
+// <TextInput
+// value={name}
+// style={styles.textInput}
+// placeholder='Enter Your name'
+// />
+
+// ye event bas text input me kaam karta he
+// onChangeText={(v)=>{setname(v)}}
+
+// ye password input ke liye hota he
+// secureTextEntry={true}
 
 
+// Form in React-Native
+
+    // <View>
+    //   <Text style={{ fontSize:30}} >Simple Form in React Native</Text>
+
+    //   <TextInput
+    //   style={styles.textInput}
+    //   placeholder='Enter username'
+    //   value={name}
+    //   onChangeText={(v)=>{setname(v)}}
+    //   />
+    //   <TextInput
+    //   style={styles.textInput}
+    //   placeholder='Enter email'
+    //   value={email}
+    //   onChangeText={(v)=>{setemail(v)}}
+    //   />
+    //   <TextInput
+    //   style={styles.textInput}
+    //   placeholder='Enter password'
+    //   value={password}
+    //   secureTextEntry={true}
+    //   onChangeText={(v)=>{setpassword(v)}}
+    //   />
+    //  <View style={{marginBottom:10}}>
+    //   <Button title='Print Details' onPress={()=>{setdisplay(true)}}></Button>
+    //  </View>
+    //   <Button title='Clear Details' onPress={()=>{resetformdata()}}></Button>
+    //   {
+    //     display?
+    //     <View>
+    //       <Text style={{ fontSize:30}} >User name is {name}</Text>
+    //       <Text style={{ fontSize:30}} >User password is {password}</Text>
+    //       <Text style={{ fontSize:30}} >User email is {email}</Text>
+    //     </View>
+    //     :null
+    //   }
 
 
+    // </View>
 
 
+// FlatList component 
+// ye component map aur filter ki tarah iterablabe hota he aur ye bhi ek callback function leta he aur iska use isliye karte he kyuki jab scroll karte he to ye screen ke bahar ke elements ko hata deta he jisse phone hang nahi hota
+// aur isme header footer bhi bana sakte he map me nahi bana sakte
+// aur isme value ke liye item hi likh sakte he aur kuch nahi likh sakte
+// aur isme alag se ScrollView ko import karne ki zarurat nahi padti lekin map me ScrollView lagana padta he
+// ye he iska syntax
 
+//  <FlatList 
+//  data={users}
+//  renderItem={({item})=><Text>{item.name}</Text>}
+//  keyExtractor={(item)=>item.id}
+//  />
+ 
 
+// SectionList
+// ye bhi flatlist ki tarah hoti bas ye nested array me bhi kaam ati he aur flatlist nahi aati aur isme jab nested array denge to data name se hi denge
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// <SectionList
+//  sections={users}
+// renderItem={({item})=><Text style={{fontSize:20}}>{item}</Text>}          // ye nested ke liye he
+// renderSectionHeader={({section:{name}})=>(                                          // ye parent array ke liye he matlab aapko konsi property dikhana he array ke object ki header ke liye
+//  <Text style={{fontSize:25,color:"red"}}>{name}</Text>
+// )}
+// />
 
 
 

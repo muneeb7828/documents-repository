@@ -329,6 +329,9 @@
 // git pull origin main
 // ye command update kar deta he folder ko
 
+// git push origin newbranch --force
+// isse agar kuch error araha ho push nahi ho rahi ho to is command se hojaygi
+
 
 // Git hub:-
 

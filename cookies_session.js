@@ -40,3 +40,37 @@
 // 10 means the cookie will expire in 10 seconds.
 
 
+
+
+// Domain
+
+// what is domain
+// server ya website ke address ko domain  bolte he for exp youtube.com google.com etc
+
+// aur iska use isliye karte he taki kisi website pe jana he to uska domain likhna padega tabhi jayenge nahi to nahi jayenge 
+
+// aur domain ke aane se phele ip address use hota ese 192.168.1.60
+
+// .com , .in, .org ye sab extensions hote he
+
+// .com ye commercial hoti he 
+// .in ye india ke liye hoti 
+// .org ye non profitable hoti he
+// .net ye  IT company aur technology ke liye hoti he
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
