@@ -10,7 +10,7 @@
 // flags in regular expressions:-
 
 // g=global matlab pure line me jaha bhi same word hoga unsab ko target karega
-// i=case insenstive matlab ke agar uperlatter ki jagah lowerlatter likha he to usko usko bhi lelega
+// i=case insenstive matlab ke agar uperlatter ki jagah lowerlatter likha he to usko bhi lelega
 // m=multiline matlab ke agar ek line pe target ho raha to iska use karenge to multiple lines me bhi target karega
 // s=singleline matlab isse bas single ko hi target karega
 
@@ -68,8 +68,8 @@
 
 // a*= isse word ho ya na ho tobhi select ho jayga
 // a+= isse word 1 ya usse zada select ho jayga
-// b{5}= isse same word 5 hoga tabhi chalega 
-// b{5,}= isse same word 5  ya usse zada hoga tabhi chalega 
+// b{5}= isse same word 5 baar likha hoga tabhi chalega 
+// b{5,}= isse same word 5 baar ya usse zada hoga tabhi chalega 
 // a{1,3}= isse same word iske beech me hoga tabhi chalega
 
 
