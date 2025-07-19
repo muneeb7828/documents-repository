@@ -250,6 +250,13 @@ backgroundColor:"black",
 // />
 
 
+// flex:1
+// iska flex react ke flex se thoda alag hota he aur ye jispe bhi lagate he to ye us hisaab se height leta he je 2 component he un dono pe hi flex:1 ye class lagi he to dono hi half half space lenge
+
+
+
+
+
 
 
 

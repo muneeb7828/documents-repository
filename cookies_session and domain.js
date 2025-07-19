@@ -42,6 +42,7 @@
 
 
 
+
 // Domain
 
 // what is domain
@@ -55,8 +56,8 @@
 
 // .com ye commercial hoti he 
 // .in ye india ke liye hoti 
-// .org ye non profitable hoti he
-// .net ye  IT company aur technology ke liye hoti he
+// .org ye porganization hoti he aur ye non profitable hoti he
+// .net ye network hoti aur  IT company aur technology ke liye hoti he
 
 
 
