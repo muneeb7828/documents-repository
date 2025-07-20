@@ -24,10 +24,8 @@
 
 // react native with expo
 // iske liye expo go app install karna padta he phone me fir usko scan karna hota he tab dekh pate he phone me
+// aur ye cli ki tarah hota he bas isme emulator nahi hota
 
-
-// is path pe android studio ki cheeze install he
-// C:\Users\Admin\AppData\Local\Android\Sdk
 
 // aur jab bhi emulator banay to medium se hi banay aur android 12,Api level 31 se banay kyuki ye space kam leta he
 
@@ -36,10 +34,6 @@
 
 // aur npx react-native run-android agar ye command chalane ke baad kuch error aay to ye command chalayenge
 // adb kill-server, adb start-server
-
-// isme jo tags hote he vo html ki tarah hote he lekin same nahi hote aur tags ko import karna padta he react native library se
-// aur isme tags ko components bolte he
-
 
 
 
@@ -125,7 +119,7 @@
 // aur check karne ke liye React-Native folder ko dekhe
 
 // View component
-// view component hota he vo parent div ki tarah hota he aur jab jsx likhte he to view se hi wrap karte he aur isko khali button pe bhi wrap kar sakte he
+// view component jo hota he vo parent div ki tarah hota he aur jab jsx likhte he to view se hi wrap karte he aur isko khali button pe bhi wrap kar sakte he
 
 // Text component 
 // ye isliye hota he jese khuch text likhna ho to iska use karte he
@@ -234,7 +228,7 @@ backgroundColor:"black",
 //  <FlatList 
 //  data={users}
 //  renderItem={({item})=><Text>{item.name}</Text>}
-//  keyExtractor={(item)=>item.id}
+//  keyExtractor={(item)=>item.id} 
 //  />
  
 
@@ -253,26 +247,91 @@ backgroundColor:"black",
 // flex:1
 // iska flex react ke flex se thoda alag hota he aur ye jispe bhi lagate he to ye us hisaab se height leta he je 2 component he un dono pe hi flex:1 ye class lagi he to dono hi half half space lenge
 
+// aur jab bhi function ka class ko call kare to to uska first letter capital hona chahiye
+
+
+// class component in react native
+
+// iske andar ek Component name ki class ko inherit karna padta he to isko import karna padte he react library se aur fir render(){} iske function ke andar jsx likhte he agar Component class ko inherit nahi karenge to render() isko use nahi kar payenge
+// aur class component ko function ke andar bhi call kar sakte he
+// aur isme bas variable hi render ke andar banate he aur functions render ke upar banate he aur jab function ko call karenge to this keyword lagana padega
+// aur isme hooks ka use nahi kar sakte
+// aur ye hota he iska syntax
+
+// import { Component } from "react";
+// import { Text,View,TextInput,Button } from "react-native";
+// import ChildClassComponent from "./childClassComponent";
+
+
+// class Classcomponent extends Component{
+//    constructor(){
+//       super()
+//      this.state={
+//       name:"rehman",
+//       age:24
+//      }
+//    }
+// updatename(){
+//  this.setState({name:"Muneeb ur rehman"})  
+// }   
+
+// render(){
+// return(
+//  <View>
+//     <Text style={{fontSize:30,color:'red'}}>Parent Class component</Text>
+//     <Text style={{fontSize:20}}>{this.state.name} This is state value in class component</Text>
+//     <TextInput placeholder="Enter your name"/>
+//     <Button title="Press ME" onPress={()=>{this.updatename()}}/>
+//     <ChildClassComponent name={this.state}/>
+//  </View>   
+// )
+
+// }    
+
+// }
+
+
+// export default Classcomponent;
 
 
 
+// is tarike se state bana sakte he class ke andar aur iske liye super() isko call karna hoga taki ye state Component class ki he
+  //  constructor(){
+  //     super()
+  //    this.state={
+  //     name:"rehman",
+  //     age:24
+  //    }
+  //  }
+
+// and this is how we change state in class component
+// aur isme fun`tion ka kuch bhi rakh sakte he aur isme jo setState he ye hi state ki value ko change karta he
+
+// updatename(){
+//  this.setState({name:"Muneeb ur rehman"})  
+// }  
 
 
 
+// lifecycle method in react native
+// ye important hota he isko samajhna
+// isme 3 phase hote he Mounting ,Update,Unmounting
+
+// Mounting 
+// jab component render hota he usi ko Mounting bolte he
+
+// Update
+// jab component me khuch change kar rahe he usi ko Update bolte he
+
+// Unmounting
+// jab component hata dete he ui se to usko Unmounting bolte he jese ek page se dusre page pe chale gay to phela page Unmount hogaya
+
+// aur har component ke alag alag lifecycle methods hote he
+
+// aur saare lifecycle method ka ek hi hook hota he useEffect()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+// show hide toggle component
 
 
 
