@@ -501,17 +501,60 @@ backgroundColor:"black",
 // npm i react-native-webview 
 // ye karne se koisi bhi web phone pe dekh sakte he
 
+
 // Navigation in React-Native
+
 // ye browerserrouter ki tarah hoti he 
 // aur isme 3 tarike ki navigtion hoti he stack, drawer, tab
 
+// require packages for react navigation 
+// npm install @react-navigation/native
+// npm install react-native-screens react-native-safe-area-context
+
+
 // stack navigation
 // jab bhi ek page se dusre page pe jana ho to stack navigation ka use karenge
+// npm install @react-navigation/native-stack
+
+// how to use this
+
+// import { NavigationContainer } from '@react-navigation/native'; 
+// import { createNativeStackNavigator } from '@react-navigation/native-stack'; 
+// const Stack = createNativeStackNavigator();
+// <NavigationContainer>
+//    <Stack.Navigator initialRouteName="HomePage" screenOptions={{ headerShown: false }}>      // ye karne se header show nahi hote
+//     <Stack.Screen name="HomePage" component={HomePage} />
+//     <Stack.Screen name="Wallet" component={Wallet} />
+//     <Stack.Screen name="userprofile" component={UserProfileScreen} />
+//     <Stack.Screen name="Loginscreen" component={LoginScreen} />
+//    </Stack.Navigator>
+// </NavigationContainer>
+
+//  style in stact navigation
+//  <Stack.Screen name="HomePage" component={HomePage} options={{title:"Home",headerStyle:{backgroundColor:'blue'},headerTitleStyle:{fontSize:20},headerTintColor:"orange"}} />
+
+//  isse sare stacks ka color change ho jata he
+//  <Stack.Navigator initialRouteName="HomePage" screenOptions={{title:"Home",headerStyle:{backgroundColor:'blue'},headerTitleStyle:{fontSize:20},headerTintColor:"orange"}}>
+
+// button and component in stack navigation
+// isme bas left aur right side pe button and component add kar sakte he
+// <Stack.Screen name="HomePage" component={HomePage} options={{headerTitle:()=><Text>home</Text>}} />      // left side
+// <Stack.Screen name="HomePage" component={HomePage} options={{headerRight:()=><Text>home</Text>}} />      // right side
+
+
+
 
 // drawer navigation
 // jab bhi kuch slide karte he jese menu pe click parte he to ek slider ajat ahe usi ko drawer navigation bolte he
 
 // tab navigation
 // ye kya karta he ki jab button pe click karne par ya slide karne par dusre component pe jay to usi ko tab navigation bolte he
+
+
+// redirect form one screen to onether screen 
+// import { useNavigation } from '@react-navigation/native';
+// const navigation = useNavigation();
+// navigation.navigate('Wallet')
+
 
 
