@@ -367,7 +367,7 @@ backgroundColor:"black",
 // is component ka use karke loader dikha sakte he aur ye single tag hota he aur size property ke size adjust kar sakte he aur color property se color change kar sakte he
 
 // Modal in react native
-// ye pop up ke liye hota he aur bedefault puri height cover kar leta he to jo text likha hota he to hide hojata he to hide se hatane ke liye transparent={true} karna padta he
+// ye pop up ke liye hota he aur bydefault puri height cover kar leta he to jo text likha hota he to hide hojata he to hide se hatane ke liye transparent={true} karna padta he
 
 // <Modal transparent={true}>
 //  <View>
@@ -473,7 +473,6 @@ backgroundColor:"black",
 // <reference types="nativewind/types"/>
 
 
-
 // this is for phone connect
 // adb kill-server
 // adb start-server
@@ -541,20 +540,102 @@ backgroundColor:"black",
 // <Stack.Screen name="HomePage" component={HomePage} options={{headerTitle:()=><Text>home</Text>}} />      // left side
 // <Stack.Screen name="HomePage" component={HomePage} options={{headerRight:()=><Text>home</Text>}} />      // right side
 
-
+// share data from one screen to onether
+// props.navigate.navigate("Home",{name:"muneeb",age:24})    this is where we are sharing data
+// props.route.params                                        this is where we getting data
 
 
 // drawer navigation
-// jab bhi kuch slide karte he jese menu pe click parte he to ek slider ajat ahe usi ko drawer navigation bolte he
+// jab bhi kuch slide karte he jese menu pe click karte he to ek slider ajata ahe usi ko drawer navigation bolte he
 
 // tab navigation
 // ye kya karta he ki jab button pe click karne par ya slide karne par dusre component pe jay to usi ko tab navigation bolte he
+
+// for bottom tab navigation
+
+// npm install @react-navigation/bottom-tabs
+
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+// const Tab =createBottomTabNavigator();     // isko App ke bahar hi likhenge
+// function App() {
+// return (
+//         <NavigationContainer>
+//         <Tab.Navigator screenOptions={{ headerShown: false}}>
+//            <Tab.Screen name="Login" component={Login} />
+//           <Tab.Screen name="Signup" component={Signup}/>
+//         </Tab.Navigator>
+//       </NavigationContainer>
+//     )
+//   }
+// function Login(){
+
+//   return(
+//     <View>
+//       <Text>Login</Text>
+//     </View>
+//   )
+// }
+
+
+// for top tab navigation
+
+// npm install @react-navigation/material-top-tabs react-native-tab-view@3.5.1   
+// npm install react-native-pager-view              
+
+// import { NavigationContainer } from '@react-navigation/native';
+// import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs'
+
+
+// const Tab =createMaterialTopTabNavigator();     // isko App ke bahar hi likhenge
+
+// function App() {
+
+// return (
+//         <NavigationContainer>
+//         <Tab.Navigator screenOptions={{ headerShown: false }}>
+//            <Tab.Screen name="Login" component={Login} />
+//           <Tab.Screen name="Signup" component={Signup}/>
+//         </Tab.Navigator>
+//       </NavigationContainer>
+//     )
+//   }
+
+// aur ye command chalane ke baad kuch error ata he to ye use karenge npm start --clean-cache
 
 
 // redirect form one screen to onether screen 
 // import { useNavigation } from '@react-navigation/native';
 // const navigation = useNavigation();
 // navigation.navigate('Wallet')
+
+
+
+// async storage in react native
+// jab bhi kuch app me store karna hoto iska use karte he aur ye library hoti he to isko install karna hota he aur ye local storage ki tarah hota he  
+// isme bhi same methods hote he setItem() , getItem() , remove() bas localstorage ki jagah AsyncStorage likhte he aur time leta he aane me to isko async function me likhte he
+// npm install @react-native-async-storage/async-storage
+// aur ye hotahe he iska syntax  
+// import AsyncStorage from '@react-native-async-storage/async-storage'
+// const setdata =async()=>{
+// const name=await AsyncStorage.setItem("user","muneeb")
+// }
+
+// Element Inspector in react native
+// emulator pe ctrl+m press karne se ek popup agayga uspe show Element inspector pe click karenge to open hojayga
+
+
+// const input=useref() 
+// input.current.focus();   // isse focus ajata he jispe bhi useref laga he
+
+// url='http://10.0.2.2:3000/users?q=${text}'
+// isse jo bhi value match karegi us objects ko array ke andar return karega
+
+
+
+
+
+
 
 
 
