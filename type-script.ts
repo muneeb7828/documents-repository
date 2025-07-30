@@ -231,12 +231,13 @@ var product1=new Product('sumsung',100000,101)
 
 console.log(product1)
 
+
 // inheritance in class
 
 class Order extends Product{
 
 constructor(){
- super("iphone",40000,100) 
+ super("iphone",40000,100)       // agar extend karke class banate he to super keyword ko call karte he
 }
 
 getprice(){
@@ -255,28 +256,20 @@ console.log(order.getprice())
 // aur class me byDefault public modifier hi hota aur isko kahin par bhi use kar sakte he aur jo private modifier hota he usko kahin par bhi use nahi kar sakte aur jo protected modifier hota he usko bas child class me dekh sakte he
 
 
-// Special types
-// Advanced types 
-// Function types
-
-
-
 // tsc configuration file
-// iska use isliye karte he jab ts file ko js file me convert karte he to iska use karte he aur isme bohot sari proerties hoti he jo ke ts file me kaam ati he
+// iska use isliye karte he jab ts file ko js file me convert karte he to iska use karte he aur isme bohot sari properties hoti he jo ke ts file me kaam ati he
 
 // how to generate config file
-// tsc --init   is command se generate hote he config file
+// tsc --init 
 
 // "target": "es2024",   
 // tsconfig file me ek property hoti he target name se ye is liye hoti he ke aap konsa version use kar rahe echma script ka ts ko js me convert karne ke liye
 
 
-// use of coding file
+
 
 // convert all ts file to js together
 // tsc     is command se ek baar me hi saari files js me convert hojati he
-
-// fix errors after config
 
 
 
@@ -287,7 +280,7 @@ const username:string=usernameInput.value
 
 
 // modules in ts
-// modules ek file ko bolte he jisme interfaces ya function ya kuch aur bhi banake ke usko export default karte he fir jis bhi file me use karna he wana import karte he
+// modules ek file ko bolte he jisme interfaces ya function ya kuch aur bhi banake ke usko export default karte he fir jis bhi file me use karna he waha import karte he
 // aur ye koi si bhi file se kar sakte he 
 // isme jo details he ye import kiya he dusri file se
 

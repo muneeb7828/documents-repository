@@ -35,7 +35,7 @@ deparment1.Departmentdetails()
 
 
 // static keyword in class
-// static keyword lagane se kisi bhi property ya method se phele to vo proerty ya method sirf class se hi access hogi instance se nahi hogi
+// static keyword lagane se kisi bhi property ya method se phele to vo property ya method sirf class se hi accessible hogi instance se nahi hogi
 // aur js me bhi hoti he
 
 
@@ -113,7 +113,7 @@ return name
 }
 
 var onlyfruit=fruits("apple")
-var onlynum=fruits(12)
+// var onlynum=fruits(12) 
 
 
 // keyof operator in ts
@@ -162,7 +162,7 @@ interface colledgetype{
   branch?:number
 }
 
-// partial iska use tab karte he jab hame types saari properties use nahi karni ho
+// partial iska use tab karte he jab hame types ki saari properties use nahi karni ho
 var colledgedata1:Partial<colledgetype>={
   name:'iit delhi',
   location:'delhi',
@@ -203,7 +203,7 @@ var APICall:Exclude<ApiStatus,'pending'>
 APICall='success'
 
 // Extract
-// iska use tab karte he jab type kuch values hi chahiye
+// iska use tab karte he jab type ki kuch values hi chahiye
 
 var APICall2:Extract<ApiStatus,'loading' | 'success'>
 APICall2="success"
@@ -323,6 +323,7 @@ type resultType={
 
 
 function Complexlogic():Promise<resultType>{
+
   return new Promise((resolve)=>{              // resolve matlab proper output milega aur reject error ke liye hota he aur jo bhi resolve me hoga vo .then() ke param me ajayga
     setTimeout(() => {
       resolve({
@@ -332,6 +333,7 @@ function Complexlogic():Promise<resultType>{
 })
     },2000);
   })
+
 }
 
 

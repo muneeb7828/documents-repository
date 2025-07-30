@@ -633,8 +633,10 @@ backgroundColor:"black",
 
 
 // this is for android installation
+// build apk
 // cd android
 // ./gradlew assembleRelease
+
 
 // is command se console log terminal pe khul jata he
 // npx react-native log-android
@@ -647,4 +649,19 @@ backgroundColor:"black",
 // 'Content-Type': 'application/json',
 // },
 // })
+
+
+//  change icon for android 
+// "https://youtu.be/mUFnr9uIlHs"
+
+//  change icon for ios
+// "https://youtu.be/V_QBKYROB6w"
+
+
+
+
+
+
+
+
 
