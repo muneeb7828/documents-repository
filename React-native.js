@@ -632,10 +632,19 @@ backgroundColor:"black",
 // isse jo bhi value match karegi us objects ko array ke andar return karega
 
 
+// this is for android installation
+// cd android
+// ./gradlew assembleRelease
+
+// is command se console log terminal pe khul jata he
+// npx react-native log-android
 
 
-
-
-
-
+// is tarike se headers likhte he
+// axios.get('https://b14273574154.ngrok-free.app/api/sunduk-service/custom-login', {
+//  withCredentials: true,
+//  headers:{
+// 'Content-Type': 'application/json',
+// },
+// })
 

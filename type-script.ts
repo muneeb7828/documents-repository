@@ -20,7 +20,7 @@
 
 
 // convert ts file to js file
-// is command ko chalane se ts file se convert hui ek js file ban jati he to jo bhi changes karte he uske baad ye command chalani padti he to fir vo update hoti he
+// is command ko chalane se ts file se convert hui ek js file ban jati he to jab bhi changes karte he uske baad ye command chalani padti he to fir vo update hoti he
 // npx tsc app.ts  (type script compiler)
 
 // npx tsc app.ts --watch
@@ -43,7 +43,7 @@
 
 // ise andar data types define kar sakte he aur isko static typing bhi bolte he aur js me nahi kar sakte
 // aur isse ye benifit hota he agar kisi variable ka data type string define kar diya to agar us variable ko change karenge to string hi dena padega
-// aur isme multilpe data type bhi de sakte he
+// aur isme multiple data type bhi de sakte he
 var data : null | string = null       // is tarike se
 // aur is tarike se static typing data type define karte he
 var age:number=24
