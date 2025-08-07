@@ -98,7 +98,7 @@ word2="        muneeb       "
 console.log(word2.trim())
 
 
-// .split() ye string ko array me convert kardeta he agar .split() ke andar (" ") ye kare to jaha bhi ye space he usko array me convert kardega lekin ye return karta he
+// .split() ye string ko array me convert kardeta he agar .split() ke andar (" ") ye kare to jaha bhi ye space he vaha se seprate kardega value lekin ye return karta he
 
 console.log(word.split(" "))
 

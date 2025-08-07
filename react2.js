@@ -73,7 +73,7 @@
 
 
 // ENV variables
-// ye bas vite react me hi chalti iska use karke data ko chupa sakte he sabse phele .evn file banini padti he folder me sabse niche
+// ye bas vite react me hi chalti iska use karke data ko chupa sakte he sabse phele .evn file banani padti he folder me sabse niche
 // aur fir VITE_ ye karke variable banate he ye he iska systax VITE_data="" isme likhke fir is file ko kahi bhi use kar sakte he
 // aur ye likhke fir isko import karna hota he jaha par bhi use karna he ese import.meta.env.data 
 
@@ -82,7 +82,7 @@
 
 
 // Pagination
-// Pagination vo hoti he jiska use isliye karte he taki ek baar pura data nahi ajay jiske computer load padega aur user interface kharab hoga 
+// Pagination vo hoti he jiska use isliye karte he taki ek baar pura data nahi ajay jiske computer pe load padega aur user interface kharab hoga 
 // iska use karke start aur limit daal sakte he url link pe jisse utne hi numbers ka data dikhega us page pe
 
 

@@ -94,10 +94,11 @@
 
 
 // object destructure  
-// let {name:email:contact:id}=obj
+// let {name,email,contact,id}=obj
 // to isse kya hoga ki agar is obj me is naam ki property he to uski value ajaygi is variable me
 // to isi ko object destructure bolte he
-
+// const {email:mail,age}=obj
+// aur is tarike se destructure karne se kahi agar kahi variable bana he to dikkat nahi aaygi
 
 
 // array destructure

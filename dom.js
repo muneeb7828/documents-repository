@@ -73,7 +73,7 @@
 // e.shiftkey=
 // e.keyCode=
 // e.currentTarget=ye bhi target ki tarah hota he bas ye propagate (change) hota rehta he target usi tag ko dikhata he jispe click hua he
-// e.preventDefault()isko use karne se agar loader he to hat jata he
+// e.preventDefault() isko use karne se agar loader he to hat jata he
 // e.stopPropagation() isko addEventListener() ke callback function ke andar likhne se bas vahi tak chalega fir stop hojata he 
 // e.Key=
 // e.Text=
@@ -127,7 +127,7 @@
 
 
 // DOM cloneNode()
-// clone maltab copy karna aur cloneNode() ki madad se ham kisi bhi tag ko copy karke dusre tag ya variable me daal sakte he
+// clone matlab copy karna aur cloneNode() ki madad se ham kisi bhi tag ko copy karke dusre tag ya variable me daal sakte he
 // aur iske andar true ya false likhna hota he agar nahi likhe to by default false hi hota he
 // jisse kya hota he vo tag ko hi copy karta he agar apan chate he ki andar ka element bhi copy ho to true 
 // likhna hoga
@@ -145,11 +145,11 @@
 // aur jo nichi likha he ye he iska syntax
 
 
-// setInterval(() => {
-    
+// const interval= setInterval(() => {
+ 
 // },timeset);
 
-
+// clearInterval(interval)
 
 
 
@@ -187,19 +187,16 @@
 
 
 // agar synchronous ko asynchronous me daal denge to vo bhi asynchronous ban jata he
-// jese koi function banaya declaration ko chod ke aur uske scope se uper call kiya to vo nahi chalega
+// jese koi function banaya declarati agar variable me daalenge to chalega
+
+
+// agar ek evion ko chod ke aur uske scope se uper call kiya to vo nahi chalega
 // lekin agar funtion banaya aur uske scope ke uper event banaya aur uske andar call kiya to chal jayga
-// synchronous aur asynchronous ki vaje se
+// asynchronous ki vaje se
 
 
 // agar koisa bhi tag ya element banne se phele kisi variable me daale to vo nahi chalega 
-// to tag ya element banne ke baad hi agar variable me daalenge to chalega
-
-
-// num=1 change nahi hota agar click hoga to events ke andar hi change hoga globally 1 hi rahega
-
-
-// agar ek event me koi variable change hota he to vo jitne bhi addeventlistener me laga he un sabhi me vo variable change ho jayga
+// to tag ya element banne ke baad hent me koi variable change hota he to vo jitne bhi addeventlistener me laga he un sabhi me vo variable change ho jayga
 
 
 // aur jo transform translate hota he usko agar chalate he to jitna chalate he utna to chal hi jata he fir agar usko chalate he to vo apni actual position pe pohuch jata he

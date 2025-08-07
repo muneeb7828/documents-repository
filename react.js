@@ -1,5 +1,5 @@
 // nodejs
-// ye run time he javascript ka matlab phele khali browser me chalta tha maltab khali web apps me istemaal kiya jata tha 
+// ye run time he javascript ka matlab phele javascript khali browser me chalta tha maltab khali web apps me istemaal kiya jata tha 
 // lekin node ne pura javascript ka code apne paas bhi le liya jisse browers ke bahar bhi isko use kar sakte he
 
 // npm 

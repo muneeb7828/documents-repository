@@ -132,6 +132,9 @@
 // isme button ko ese likhte he
 // <Button title='press here'></Button>
 
+// SafeAreaView component
+// ye View ki tarah hota he bas ye top se aur bottom se cheezon ko hata deta
+
 // isme console.log nahi hota isme debugger hota he jisme error dekhte he
 // aur isme ek method hota he console.warn() ye console.log ki tarah kaam karta bas ye screen pe dikhata he
 
@@ -350,7 +353,6 @@ backgroundColor:"black",
 //   )
 // }
 
-
 // const User=()=>{
 //  return <View>
 //    <Text style={{fontSize:30,color:'green'}}>User Component</Text> 
@@ -360,14 +362,14 @@ backgroundColor:"black",
 
 
 // TouchableOpacity
-// ye Buutton component jese hi hoti bas isme styling bhi kar sakte he button me nahi kar sakte aur isme single closing tag dono hote he
+// ye Button component jese hi hoti bas isme styling bhi kar sakte he button me nahi kar sakte aur isme single closing tag dono hote he
 
 
 // Activity Indicator (loader)
-// is component ka use karke loader dikha sakte he aur ye single tag hota he aur size property ke size adjust kar sakte he aur color property se color change kar sakte he
+// is component ka use karke loader dikha sakte he aur ye single tag hota he aur size property se size adjust kar sakte he aur color property se color change kar sakte he
 
 // Modal in react native
-// ye pop up ke liye hota he aur bydefault puri height cover kar leta he to jo text likha hota he to hide hojata he to hide se hatane ke liye transparent={true} karna padta he
+// ye pop up ke liye hota he aur bydefault puri height cover kar leta he to jo text likha hota he to hide hojata he to hide se hatane ke liye isko transparent={true} karna padta he
 
 // <Modal transparent={true}>
 //  <View>
@@ -474,6 +476,7 @@ backgroundColor:"black",
 
 
 // this is for phone connect
+// usb connect and in phone developer is on and
 // adb kill-server
 // adb start-server
 // adb devices
@@ -498,7 +501,7 @@ backgroundColor:"black",
 // aur isko ese use karte he Platform.OS to ye platform ka name batata he
 
 // npm i react-native-webview 
-// ye karne se koisi bhi web phone pe dekh sakte he
+// ye karne se koisi bhi web app me pe dekh sakte he
 
 
 // Navigation in React-Native
@@ -522,11 +525,11 @@ backgroundColor:"black",
 // const Stack = createNativeStackNavigator();
 // <NavigationContainer>
 //    <Stack.Navigator initialRouteName="HomePage" screenOptions={{ headerShown: false }}>      // ye karne se header show nahi hote
-//     <Stack.Screen name="HomePage" component={HomePage} />
-//     <Stack.Screen name="Wallet" component={Wallet} />
-//     <Stack.Screen name="userprofile" component={UserProfileScreen} />
-//     <Stack.Screen name="Loginscreen" component={LoginScreen} />
-//    </Stack.Navigator>
+  //   <Stack.Screen name="HomePage" component={HomePage} />
+  //   <Stack.Screen name="Wallet" component={Wallet} />
+  //   <Stack.Screen name="userprofile" component={UserProfileScreen} />
+  //   <Stack.Screen name="Loginscreen" component={LoginScreen} />
+  //  </Stack.Navigator>
 // </NavigationContainer>
 
 //  style in stact navigation
@@ -537,10 +540,12 @@ backgroundColor:"black",
 
 // button and component in stack navigation
 // isme bas left aur right side pe button and component add kar sakte he
-// <Stack.Screen name="HomePage" component={HomePage} options={{headerTitle:()=><Text>home</Text>}} />      // left side
+{/* <Stack.Screen name="HomePage" component={HomePage} options={{headerTitle:()=><Text>home</Text>}} />      // left side */}
 // <Stack.Screen name="HomePage" component={HomePage} options={{headerRight:()=><Text>home</Text>}} />      // right side
 
-// share data from one screen to onether
+// stack.navigator tag ke uper agar kisi bhi component ko likhenge to vo dynamic ho jaygi
+
+// share data from one screen to another
 // props.navigate.navigate("Home",{name:"muneeb",age:24})    this is where we are sharing data
 // props.route.params                                        this is where we getting data
 
@@ -595,13 +600,57 @@ backgroundColor:"black",
 //         <NavigationContainer>
 //         <Tab.Navigator screenOptions={{ headerShown: false }}>
 //            <Tab.Screen name="Login" component={Login} />
-//           <Tab.Screen name="Signup" component={Signup}/>
+//            <Tab.Screen name="Signup" component={Signup}/>
+//            <Tab.Screen name="FormPost" component={FormPost}
+//            options={{
+//            tabBarStyle: { display: 'none' }, // This hides the tab from the top bar 
+//            tabBarButton: () => null,         // This disables the tab button
+//            }} />
 //         </Tab.Navigator>
 //       </NavigationContainer>
 //     )
 //   }
 
+
+// Move FormPost to a Stack Navigator (not the Top Tabs)
+// Goal:Remove FormPost from top tabs
+// Keep FormPost available via navigation.navigate('FormPost')
+// 1. Wrap your app with both Stack and Tab Navigators
+// const Tab = createMaterialTopTabNavigator();
+// const Stack = createNativeStackNavigator();
+
+// 2. Create Tab Navigator without FormPost
+// function TabScreens() {
+//   return (
+//     <Tab.Navigator>
+//       <Tab.Screen name="Login" component={Login} />
+//       <Tab.Screen name="Signup" component={Signup} />
+//     </Tab.Navigator>
+//   );
+// }
+
+// 3. Add FormPost to Stack Navigator Only
+// export default function AppNavigation() {
+//   return (
+//     <NavigationContainer>
+//       <Stack.Navigator initialRouteName="Tabs">
+//         <Stack.Screen
+//           name="Tabs"
+//           component={TabScreens}
+//           options={{ headerShown: false }}
+//         />
+//         <Stack.Screen name="FormPost" component={FormPost} />
+//       </Stack.Navigator>
+//     </NavigationContainer>
+//   );
+// }
+//  Now FormPost is:
+// Not visible in Top Tab Bar	No Tab labeled "FormPost"
+// Still accessible via navigation.navigate("FormPost")	Not part of tab navigation
+
 // aur ye command chalane ke baad kuch error ata he to ye use karenge npm start --clean-cache
+
+
 
 
 // redirect form one screen to onether screen 
@@ -609,20 +658,37 @@ backgroundColor:"black",
 // const navigation = useNavigation();
 // navigation.navigate('Wallet')
 
+// navigation.reset({
+//   index: 0,
+//   routes: [{ name: 'Login' }],
+// });
+// navigation.reset():
+// This clears all previous routes (screens) from the navigation history (stack), so the user cannot go back to any previous screen using the back button.
+
+// index: 0:
+// This sets the active screen index (0-based) — so Login will be the only screen, and it will be the active one.
+
+// routes: [{ name: 'Login' }]:
+// This defines a new route stack — here, you're only adding the Login screen.
+
 
 
 // async storage in react native
 // jab bhi kuch app me store karna hoto iska use karte he aur ye library hoti he to isko install karna hota he aur ye local storage ki tarah hota he  
 // isme bhi same methods hote he setItem() , getItem() , remove() bas localstorage ki jagah AsyncStorage likhte he aur time leta he aane me to isko async function me likhte he
 // npm install @react-native-async-storage/async-storage
+// npx react-native link @react-native-async-storage/async-storage
 // aur ye hotahe he iska syntax  
 // import AsyncStorage from '@react-native-async-storage/async-storage'
 // const setdata =async()=>{
 // const name=await AsyncStorage.setItem("user","muneeb")
 // }
+// const access_token=await AsyncStorage.getItem("access_token")
+
+
 
 // Element Inspector in react native
-// emulator pe ctrl+m press karne se ek popup agayga uspe show Element inspector pe click karenge to open hojayga
+// emulator pe ctrl+m press karne se aur metro pe j karne se ek popup agayga uspe show Element inspector pe click karenge to open hojayga
 
 
 // const input=useref() 
@@ -632,10 +698,11 @@ backgroundColor:"black",
 // isse jo bhi value match karegi us objects ko array ke andar return karega
 
 
-// this is for android installation
+// this is for android app installation
 // build apk
 // cd android
 // ./gradlew assembleRelease
+// au iske baad zip file me convert karke dena hota he
 
 
 // is command se console log terminal pe khul jata he
@@ -644,11 +711,18 @@ backgroundColor:"black",
 
 // is tarike se headers likhte he
 // axios.get('https://b14273574154.ngrok-free.app/api/sunduk-service/custom-login', {
-//  withCredentials: true,
+//  withCredentials: true,    // ye cookie ke liye hota he agar cookie hoti toye chal jata he
 //  headers:{
 // 'Content-Type': 'application/json',
+//  Cookie: `JSESSIONID=${jsessionid}`,    // is tarike sessionid send kar sakte he
 // },
 // })
+
+
+// npm install react-native-inappbrowser-reborn
+// Use react-native-inappbrowser-reborn for login
+// This keeps the login flow within the app and maintains the session
+// ye app ke andar hi browser ko khol deta he jisse cookies lene me problem nahi hoti aur secure bhi ho jata he
 
 
 //  change icon for android 
@@ -658,7 +732,36 @@ backgroundColor:"black",
 // "https://youtu.be/V_QBKYROB6w"
 
 
+// AndroidManifest.xml
+// isme app ki conigurations hoti he
 
+
+
+// hide keyboard from phone
+// import { Keyboard } from 'react-native';
+// Keyboard.dismiss()
+// Dismiss Keyboard When Tapping Outside Input
+// Wrap your screen in TouchableWithoutFeedback.So whenever user click outside the textinput keyboard will remove
+// <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+//   <View style={{ flex: 1 }}>
+//    {/* your form and scrollview here */}
+//   </View>
+// </TouchableWithoutFeedback>
+
+
+// jwt in react native
+// const response = await fetch('http://192.168.29.52:3000/protected', {
+//    method: 'GET',
+//    headers: {
+//      'Content-Type': 'application/json',
+//      'Authorization': Bearer `${token}`,
+//    },
+//  });
+
+
+
+// How UPI works.
+// https://youtu.be/iI2NaN_QVTI?si=JBmCkjqCaZROab5f
 
 
 
