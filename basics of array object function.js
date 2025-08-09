@@ -971,6 +971,8 @@ return a-b
 console.log(number)
 
 
+// toFixed(2)
+// ye toFixed(2) ye number ko decimal me convert karke string me return karta he aur jo 2 he ye isliye he point ke baad kitne number dikhana he
 
 
 
