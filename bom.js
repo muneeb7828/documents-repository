@@ -121,7 +121,7 @@ console.log(closewindow)
 
 // move new browser window
 
-// aur ye bas usi window ko move karega jo same website me ho
+// aur ye bas usi window ko move karega jo same page me ho
 
 // moveTo()
 // moveTo() isme 2 argument hote he x axis, y axis ke liye aur isme jo bhi height width dete he vo utni screen ke x axis, y axis se door hojati he
@@ -203,39 +203,6 @@ console.log(closewindow)
 
 
 
-
-
-// protocol (set of rules) 
-// protocol vo hota jo page aap search kar rahe ho usko connect karne ka kaam aur data sharing ka kaam karta he agar vo page he to 
-// aur bina protocol ke ham connect aur data share nahi kar sakte dusre page ko aur internet ko access bhi nahi kar sakte
-// aur jis ko bhi connect kar rahe he uska bhi protocol ka type same hona chahiye agar same nahi he to connect nahi hoga
-// http,tcp/ip,smtp,pop etc ye sab types hote he protocol ke aur tcp/ip ye sab se zada basic hota he
-
-// http (hiper text transfer protocol)
-// http ye kya karta he ki jo page aap ko chahiye usko connect karta he agar vo page he to
-
-// tcp/ip 
-// tcp/ip ye kya karta he ki tcp jo bhi page search kar rahe ho usko connect karne ka kaam karta he
-// aur ip data sharing ka kaam karta he
-
-
-// smtp (system mail transfer protocol)
-// ye mail transfer karne ke kaam ata magar tabhi jab receiver online ho kyu ki ye server me store nahi karta
-
-// pop(post office protocol)
-// ye kya karta he ki ye bhi mail transfer karta he lekin agar receiver online nahi he to bhi mail transfer kar deta he 
-// aur mail server me store ho jata he aur jab bhi receiver online ata he to uske paas server se mail ajata he jese whatsapp instagram me hota he
-
-
-// server
-// server net se chalta he
-// kabhi esa hota he ki website hang ho jati he kyuki server me bohot saare users ajate he same page pe jaane ke kiye jisse kya hota he ki server ko us page pe bhejna mushkil ho jata he
-// server kya hota he ki jo bhi chiz aap search kar rahe ho usko store karke bhejne ka kaam karta he us page pe
-
-
-
-
-
 // get history of browser window (history object)
 
 // jo back karne ka option hota he usi ko history bolte he
@@ -244,9 +211,6 @@ console.log(closewindow)
 // history.forward() ye next page batata he
 // history.go() isse jo bhi number dalo us page pe la deta he
 // history.length se history length batata he
-
-
-
 
 
 
@@ -291,6 +255,58 @@ console.log(closewindow)
 // console.clear() is se console clear ho jata he
 
 // focus() isse window pe focus ajata he
+
+
+
+
+
+// protocol (set of rules) 
+// protocol vo hota jo page aap search kar rahe ho usko connect karne ka kaam aur data sharing ka kaam karta he agar vo page he to 
+// aur bina protocol ke ham connect aur data share nahi kar sakte dusre page ko aur internet ko access bhi nahi kar sakte
+// aur jis ko bhi connect kar rahe he uska bhi protocol ka type same hona chahiye agar same nahi he to connect nahi hoga
+// http,tcp/ip,smtp,pop etc ye sab types hote he protocol ke aur tcp/ip ye sab se zada basic hota he
+
+// http (hiper text transfer protocol)
+// http ye kya karta he ki jo server aap ko chahiye usko connect karta he agar vo server he to
+
+// https (hiper text transfer protocol security)
+// https ye bhi http ki tarah hota he bas ye secure hota he aur http aur tls se milkar bana he
+
+// What is Encryption
+// it is secure feature of https 
+// if a client wants to sent text to server but dont want anybody to read then we use encryption.So we hide message or obfuscate message so no one can read message and only server can decryped message
+
+// types of Encryption
+// Symmetric Encription and Asymmetric Encryption
+
+// Symmetric Encription
+// it is an old and best known technique.it is simplest kind of incryption because it involves only one secret key to encrypt and decrypt information like password
+// isme ek disadvantage hota he agar encrypt data ko decrypt karna he to to secret key bhi share karna hogi aur http me sent karne se hack ho sakti he to https ka use karna hoga
+
+// Asymmetric Encryption
+// ye zada secure hoti he Symmetric Encription se kyu ki isme 2 key hoti he public key and private key.Public key use for encrypt data while private key is use for decrypt data and we can not give private key to anyone.
+
+// tcp/ip 
+// tcp/ip ye kya karta he ki tcp jo bhi server search kar rahe ho usko connect karne ka kaam karta he
+// aur ip data sharing ka kaam karta he
+
+
+// smtp (system mail transfer protocol)
+// ye mail transfer karne ke kaam ata magar tabhi jab receiver online ho kyu ki ye server me store nahi karta
+
+// pop(post office protocol)
+// ye kya karta he ki ye bhi mail transfer karta he lekin agar receiver online nahi he to bhi mail transfer kar deta he 
+// aur mail server me store ho jata he aur jab bhi receiver online ata he to uske paas server se mail ajata he jese whatsapp instagram me hota he
+
+
+// server
+// server net se chalta he
+// kabhi esa hota he ki website hang ho jati he kyuki server me bohot saare users ajate he same page pe jaane ke kiye jisse kya hota he ki server ko us page pe bhejna mushkil ho jata he
+// server kya hota he ki jo bhi chiz aap search kar rahe ho usko store karke bhejne ka kaam karta he us page pe
+
+
+
+
 
 
 

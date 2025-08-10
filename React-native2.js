@@ -270,13 +270,12 @@
 
 
 // path me param ese dete he
-// params: {amount,fromCurrency: fromCurrency,toCurrency: toCurrency,}
+// params: {amount:amount,fromCurrency:USD,toCurrency:INR,}
 
 
 // google auth
 // session authentication
 // JWT (JSON WEB TOKEN)
-// private key and public key
 // network call in react native
 // wallet
 
