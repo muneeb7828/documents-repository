@@ -306,7 +306,189 @@ console.log(closewindow)
 
 
 
+// JWT (json web token) authentication
+// JWT ye bhi public private criptography ki tarah kaam karta he aur state less hota he
+// isme kya hota he isme token generate hota to jiske paas bhi token hota he vo authenticate kar sakta he
+// jwt me kya hota he ye aapka data leta he usko encript kar dete he aur kon decript karega ye server decide karega
+// iske token me 3 parts hote he 1 part me kya hota he ki ye batata he konsi algoritym use kar rahe he kyuke isme bohot sare algoritym hoti he 2 part batata he ki kya informtion he aapke paas me 3 part signature hota he iske andar private key hota he
+// aur isme har token ke sath expiry time bhi dal sakte he ki kab token expire hoga
 
 
+// how jwt works
+
+// 1️⃣ Step 1 – User logs in
+// You (the client, e.g., a browser or mobile app) send your username + password to the server.
+
+// The server checks if they’re correct (e.g., by looking in a database).
+
+// 2️⃣ Step 2 – Server creates the JWT
+// If login is successful, the server makes a token with three parts:
+
+// Header → says “This is a JWT” and “I’ll sign it with HS256” (or another algorithm).
+// {
+//   "alg": "HS256",
+//   "typ": "JWT"
+// }
+
+// Payload → contains the data (claims) the server wants to remember.
+
+// {
+//   "userId": 123,          ==> Uniquely identifies the user.
+//   "role": "admin",        ==> can access admin dashboard
+//   "exp": 1733827200       ==> Expiration time
+// }
+// exp means expiration time — when the token stops working.
+
+// Signature → created by:
+
+// signature = HMACSHA256(
+//   base64UrlEncode(header) + "." + base64UrlEncode(payload),
+//   secretKey
+// )
+// This secret key is only known to the server.
+
+// The signature ensures no one can change the token without being caught.
+
+// 3️⃣ Step 3 – Server sends JWT to client
+// The server Base64Url encodes header & payload, adds the signature, and sends you something like:
+
+// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+// .
+// eyJ1c2VySWQiOjEyMywicm9sZSI6ImFkbWluIiwiZXhwIjoxNzMzODI3MjAwfQ
+// .
+// abcdef1234567890signature
+
+// 4️⃣ Step 4 – Client stores the JWT
+// Your app stores it (in localStorage, sessionStorage, or a secure HTTP-only cookie).
+
+// Example (localStorage):
+
+// localStorage.setItem("token", jwt);
+
+// 5️⃣ Step 5 – Making future requests
+// Every time you need data from the server, you send the token in the Authorization header:
+// Authorization: Bearer <your-jwt-here>
+
+// 6️⃣ Step 6 – Server verifies JWT
+// When the server gets your request:
+
+// It splits the JWT into header, payload, and signature.
+
+// It recalculates the signature using the same secret key.
+
+// If the signature matches and the token is not expired → ✅ request is allowed.
+
+// If it doesn’t match or is expired → ❌ request is denied.
+
+// 7️⃣ Step 7 – Server responds
+// If valid, the server uses the data in the payload (like userId, role) to know who you are and what you can do.
+
+// Sends back the requested data (JSON, HTML, etc.).
+
+// 🔄 Flow Summary
+// Login → Server creates JWT → Send to client.
+
+// Client stores JWT → Sends it with each request.
+
+// Server verifies JWT → Allows or rejects request.
+
+// 💡 Key notes:
+
+// JWT is stateless → Server doesn’t store tokens in memory, so it scales easily.
+
+// Anyone can read payload (it’s just encoded), but only the server can verify or create a valid signature.
+
+// Always use HTTPS so no one can steal the token in transit.
+
+
+// How UPI works.
+// https://youtu.be/iI2NaN_QVTI?si=JBmCkjqCaZROab5f
+
+// psp (payment service provider)
+// ye kya karta he ki ye API for exp google pay,phonepay etc ko connect karta he bank se aur jab bhi koi payment karta he to ye sender ki upi id,id,amount aur receiver ki upi id,id leke npci ko send kar deta he
+// aur npci kya karta he vo sender ke account ki amount nikal ke receiver ke account me daal deta he aur ye actual amount nahi bejta bas rbi ka trust hota he
+
+// how upi wallet works and apple pay works 
+// https://youtu.be/JQ_wXA9JA1g?si=TXG5kKHF_U8mj6FO
+
+
+// how payment flow works detail explanations
+// https://chatgpt.com/share/68958638-567c-800f-bf4d-7201d6692454
+
+
+// google auth
+// https://youtu.be/ZDuRmhLSLOY?si=b348gJZSHdZVXKC7
+// https://youtu.be/GcVtElYa17s?si=FRBzExPwA83uhV0O
+
+
+// session authentication
+// User logs in → Server checks credentials → Server creates a session in its memory or database and gives the browser a session ID (usually in a cookie).
+// On each request, the browser sends the cookie → Server looks up the session data from its storage.
+// Session authentication = stateful, cookie + session ID, server stores the state.
+
+// API authentication
+// Client logs in → Server issues an access token (like JWT).Token is sent with every request in the Authorization header.Server checks token validity without looking up a session in memory.
+// API authentication = stateless, token-based, server does not store state.
+
+
+// network call in react native:-
+
+// Understand the Columns
+// Name – The file or API endpoint requested.
+// Status – HTTP status code (200 OK, 404 Not Found, 500 Server Error, etc.).
+// Type – The resource type (document, script, xhr for APIs, image, etc.).
+// Initiator – Who made the request (the page, a script, etc.).
+// Size – The file size downloaded.
+// Time – How long the request took.
+// Waterfall – A visual timeline of requests.
+// XHR / Fetch – API requests (most useful for debugging).
+
+// Common Uses
+// Debugging API calls – Check if your request URL, params, or headers are correct.
+// Checking status codes – See if the server returned an error.
+// Inspecting response data – View JSON returned by the API.
+// Watching redirects – See where your request got redirected.
+// Measuring performance – See which files are slow to load.
+
+// The Network tab only shows requests after you’ve opened the api.
+
+// Here’s your Docs vs XHR vs JS comparison chart in simple Hinglish:
+
+// Filter	    Full Form / Meaning	                    Kya Dikhata Hai	                                    Kab Use Karna                        	               Example
+// Docs    	 Documents	               Sirf HTML document requests (main page, iframe pages)	    Page load / reload check karne, redirects dekhne	     index.html, login.html
+// XHR    	 XMLHttpRequest / Fetch	      API calls, JSON data, backend se aane wale responses	    API debugging, POST/GET data check karne	           /api/user, /products?limit=10
+// JS	     JavaScript	                 Sirf .js files jo page pe load ho rahi hain	           JavaScript file missing / error troubleshoot karne	    app.js, vendor.bundle.js
+
+// No throttling iska use isliye karte he taki dekh sake kitni network speed me website sahi chal rahi he
+
+
+
+// escrow account:-
+// escrow account wallet ya upi se different hota kyu ki usme bas thoda amount ki transfer kar sakte he lekin isme big amount transfer kar sakte he aur ye real state ya bussines wagera ke liye hota he
+// aur teen types ke escrow account open 
+
+// How to Use an Escrow Account (General Process)
+
+// Choose an Escrow Service
+// This can be a bank, a licensed escrow company, or an online escrow platform (like Escrow.com, Payoneer Escrow, etc.).
+// In India, banks like HDFC, ICICI, and Axis offer escrow services, and for online freelancing, sites like Upwork have built-in escrow.
+
+// Agree on Terms
+// Buyer and seller decide on:Price ,What will be delivered and Time frame
+// Buyer Deposits Money into Escrow
+// The buyer transfers the agreed amount to the escrow account (not directly to the seller).
+// Seller Delivers the Goods/Services
+// The seller ships the product, delivers the service, or completes the agreed task.
+// Buyer Confirms Delivery
+// The buyer checks and approves that the goods/services match the agreement.
+// Escrow Releases Payment to Seller
+// Once approval is given (or the inspection period ends), escrow transfers the money to the seller.
+// Dispute Handling (If Needed)
+// If there’s a problem, the escrow service acts as a neutral mediator and may refund the buyer or negotiate a resolution.
+
+
+// ppi (Payment Protection Insurance)
+// Industry: Insurance / Loans / Credit Cards
+// Ye ek insurance hota hai jo aapke loan ya credit card ka repayment cover karta hai agar aap kisi wajah se payment nahi kar paate — jaise job chali jana, bimaari ho jana, ya accident ho jana.
 
 

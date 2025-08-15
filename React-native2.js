@@ -35,7 +35,7 @@
 
 // button and component in stack navigation
 // isme bas left aur right side pe button and component add kar sakte he
-{/* <Stack.Screen name="HomePage" component={HomePage} options={{headerTitle:()=><Text>home</Text>}} />      // left side */}
+// <Stack.Screen name="HomePage" component={HomePage} options={{headerTitle:()=><Text>home</Text>}} />      // left side 
 // <Stack.Screen name="HomePage" component={HomePage} options={{headerRight:()=><Text>home</Text>}} />      // right side
 
 // stack.navigator tag ke uper agar kisi bhi component ko likhenge to vo dynamic ho jaygi
@@ -60,12 +60,12 @@
 // const Tab =createBottomTabNavigator();     // isko App ke bahar hi likhenge
 // function App() {
 // return (
-//         <NavigationContainer>
-//         <Tab.Navigator screenOptions={{ headerShown: false}}>
-//            <Tab.Screen name="Login" component={Login} />
-//           <Tab.Screen name="Signup" component={Signup}/>
-//         </Tab.Navigator>
-//       </NavigationContainer>
+      //   <NavigationContainer>
+      //   <Tab.Navigator screenOptions={{ headerShown: false,tabBarHideOnKeyboard:true}}>  // ye karne se keyboard ane baad bottom tab navigaion uper atahe to isse hat jayga
+      //      <Tab.Screen name="Login" component={Login} />
+      //     <Tab.Screen name="Signup" component={Signup}/>
+      //   </Tab.Navigator>
+      // </NavigationContainer>
 //     )
 //   }
 // function Login(){
@@ -143,9 +143,27 @@
 // Not visible in Top Tab Bar	No Tab labeled "FormPost"
 // Still accessible via navigation.navigate("FormPost")	Not part of tab navigation
 
+// agar ham chate he ki tab navigation visible rahe aur single tab me multible screens dekh sake to iska use karenge
+// function PotsStack() {
+//   return (
+//     <PotsStackNav.Navigator screenOptions={{ headerShown: false }}>
+//       <PotsStackNav.Screen name="PotsMain" component={Pot} />
+//       <PotsStackNav.Screen name="PotsDetails" component={PotsDetails} />
+//       <PotsStackNav.Screen name="Addpot" component={Addpot} />
+//     </PotsStackNav.Navigator>
+//   );
+// }
+// <Tab.Screen name="Home" component={Home} />
+// <Tab.Screen name="Analytics" component={Home} />
+// <Tab.Screen name="Pots" component={PotsStack} />
+// <Tab.Screen name="Payment" component={Home} />
+
+
+
 // aur ye command chalane ke baad kuch error ata he to ye use karenge npm start --clean-cache
 
-
+// this is for icon in react navigation 
+// npm install react-native-vector-icons
 
 
 // redirect form one screen to onether screen 
@@ -256,28 +274,90 @@
 // aur session authentication bas ek server (browser) pe hi chalta he aur jwt bohot saare servers par chal jata he 
 // aur ye ham isliye use karte he taki hame user ki bare me pata chale aur user ki permission mile
 
+// axios.create
+// const api = axios.create({
+//   baseURL: 'https://e9340e07eb2d.ngrok-free.app/api/sunduk-service',
+//   timeout: 1000,
+// });
+// isse axios create karke variable me store kar sakte he jis kya hogaki baad me bas api.get('/users') ye likhna hoga pura url nahi
+// aur timeout is property ka use karke axios ki time set kar sakte he agar is time ke hit karengeto nahi chalegi
 
-// How UPI works.
-// https://youtu.be/iI2NaN_QVTI?si=JBmCkjqCaZROab5f
-
-
-// How google pay and android pay works 
-// https://youtu.be/JQ_wXA9JA1g?si=TXG5kKHF_U8mj6FO
-
-
-// how payment flow works detail explanations
-// https://chatgpt.com/share/68958638-567c-800f-bf4d-7201d6692454
 
 
 // path me param ese dete he
 // params: {amount:amount,fromCurrency:USD,toCurrency:INR,}
 
 
-// google auth
-// session authentication
-// JWT (JSON WEB TOKEN)
-// network call in react native
-// wallet
+// Cookie in react-native:-
+
+// npm install @react-native-cookies/cookies
+
+// import Cookies from '@react-native-cookies/cookies';
+
+// const saveUserCookies = async (jsessionid, email, fullName) => {
+
+// Ye domain wo hota hai jiske liye cookies store karni hain.
+// Agar aapka backend URL hai https://502ea5ad5cdc.ngrok-free.app/api/..., to aapko sirf host (subdomain + domain) likhna hota hai.
+// Cookies browser / WebView / network requests me tabhi automatically attach hoti hain jab domain match kare.
+// aur jaha par bhi ye api hit hogi to apne aap cookie save ho jaygi
+
+//  const domain = '502ea5ad5cdc.ngrok-free.app'; // apne backend ka domain
+
+//     // JSESSIONID cookie
+//     await Cookies.set(domain, {
+//       name: 'JSESSIONID',
+//       value: jsessionid,
+//       path: '/',
+//       secure: true,
+//       sameSite: 'Lax',
+//     });
+
+//     // Email cookie
+//     await Cookies.set(domain, {
+//       name: 'email',
+//       value: encodeURIComponent(email),
+//       path: '/',
+//       secure: true,
+//       sameSite: 'Lax',
+//     });
+
+//     // Full name cookie
+//     await Cookies.set(domain, {
+//       name: 'fullName',
+//       value: encodeURIComponent(fullName),
+//       path: '/',
+//       secure: true,
+//       sameSite: 'Lax',
+//     });
+//   };
+// name → Cookie ka naam (JSESSIONID, email, fullName).
+
+// value → Jo data store karna hai (yaha pe jsessionid variable ki value).
+
+// path → / ka matlab hai ki ye cookie pure domain ke liye valid hai (sub-paths ke liye bhi).
+
+// secure: true → Iska matlab ye cookie sirf HTTPS connection pe bheji jayegi (ngrok free app pe ye kaam karega kyunki wo https hota hai).
+
+// sameSite: 'Lax' → Browser ko batata hai ki ye cookie same site requests ke saath bhejna safe hai (cross-site request me kab bhejna hai ye control karta hai).
+
+// value: encodeURIComponent(email) -> Email aur full name me space, @, special characters hote hain.un characters ko safe format me convert karta hai.
+
+
+// if (jsessionid && email && fullName) {
+//   await saveUserCookies(jsessionid, email, fullName);
+//   console.log("✅ Cookies saved successfully!");
+// }
+
+
+// React-native me is tarike cookie dekh sakte he isme browser me nahi dekh sakte
+// const checkCookies = async () => {
+//   const cookies = await Cookies.get('502ea5ad5cdc.ngrok-free.app');
+//   console.log('🍪 Saved Cookies:', cookies);
+// };
+
+
+
+
 
 
 

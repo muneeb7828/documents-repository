@@ -135,6 +135,12 @@
 // SafeAreaView component
 // ye View ki tarah hota he bas ye top se aur bottom se cheezon ko hata deta
 
+// SafeAreaProvider component
+// iOS (aur kuch Android phones) mein screen ke kuch hisse hote hain jaha pe tumhara app ka content nahi aana chahiye — jaise:Notch (iPhone X se shuru) , Rounded Corners ,Dynamic Island (iPhone 14 Pro+) ,Status Bar / Navigation gestures area (Android phones mein)
+// if we dont use SafeAreaProvider
+// React Native ko pata hi nahi chalega ki safe area kaunsa hai.Tumhara header, tab bar, ya koi bhi content status bar ke peeche chala jayega.iPhone notch ya Dynamic Island ke peeche content cut ho sakta hai
+
+
 // KeyboardAvoidingView
 // KeyboardAvoidingView ka kaam hai screen ko upar shift karna ya resize karna jab keyboard dikhta hai.
 // behavior – Ye decide karta hai ki view kaise adjust hoga aur ye iski values "padding" ye top padding add karke content upar karega.Aur"height" ye view ki height chhoti kar dega.
