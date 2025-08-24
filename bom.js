@@ -452,7 +452,7 @@ console.log(closewindow)
 
 // The Network tab only shows requests after you’ve opened the api.
 
-// Here’s your Docs vs XHR vs JS comparison chart in simple Hinglish:
+// Here’s your Docs vs XHR vs JS comparison chart:
 
 // Filter	    Full Form / Meaning	                    Kya Dikhata Hai	                                    Kab Use Karna                        	               Example
 // Docs    	 Documents	               Sirf HTML document requests (main page, iframe pages)	    Page load / reload check karne, redirects dekhne	     index.html, login.html
@@ -490,5 +490,35 @@ console.log(closewindow)
 // ppi (Payment Protection Insurance)
 // Industry: Insurance / Loans / Credit Cards
 // Ye ek insurance hota hai jo aapke loan ya credit card ka repayment cover karta hai agar aap kisi wajah se payment nahi kar paate — jaise job chali jana, bimaari ho jana, ya accident ho jana.
+
+
+
+
+// What is a Payment Gateway?
+
+// A payment gateway is a service that connects your app/website to the banking system so you can accept digital payments (cards, UPI, wallets, net banking, etc.) from your customers
+
+// What payment gateways do:-
+
+// Secure card/UPI data → They encrypt and safely send it to banks.
+// Authorization → Ask the bank: “Does this customer have enough balance? Can we charge ₹500?”
+// Settlement → Move money from the customer’s account to the merchant’s account.
+// Fraud detection → Block suspicious payments.
+// Multiple options → Support Cards, UPI, Wallets, EMI, Net banking, etc.
+
+
+// Popular Payment Gateways:-
+
+// India: Razorpay, Paytm, PhonePe, Cashfree, CCAvenue
+// Global: Stripe, PayPal, Adyen, Square
+
+// Example in real life:-
+
+// When you buy something on Amazon and enter your card → you’re not giving it to Amazon directly.
+// Amazon sends you to a payment gateway (like Razorpay, Stripe, Paytm).
+// The payment gateway securely takes your card info, talks to the bank, confirms payment, and tells Amazon → “Payment successful”.
+
+
+
 
 

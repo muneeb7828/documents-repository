@@ -589,6 +589,7 @@ backgroundColor:"black",
 // npm i react-native-webview 
 // ye karne se koisi bhi web app me pe dekh sakte he
 // jese agar user ko ek offer page ya terms & conditions page website se dikhana ho → wo page WebView me load kar dete hain.
+// and by default, React Native app cannot directly “see” what the user is doing inside a WebView (like button clicks, form fills, payments, etc.).
 
 
 // shadow properties
