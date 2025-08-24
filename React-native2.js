@@ -261,6 +261,15 @@
 //   </View>
 // </TouchableWithoutFeedback>
 
+// some keyboard events
+// useEffect(() => {
+//   const showSub = Keyboard.addListener("keyboardDidShow", () => setKeyboardVisible(true));
+//   const hideSub = Keyboard.addListener("keyboardDidHide", () => setKeyboardVisible(false));
+//   return () => {
+//     showSub.remove();
+//     hideSub.remove();
+//   };
+
 
 // jwt in react native
 // const response = await fetch('http://192.168.29.52:3000/protected', {
@@ -331,11 +340,8 @@
 //     });
 //   };
 // name → Cookie ka naam (JSESSIONID, email, fullName).
-
 // value → Jo data store karna hai (yaha pe jsessionid variable ki value).
-
 // path → / ka matlab hai ki ye cookie pure domain ke liye valid hai (sub-paths ke liye bhi).
-
 // secure: true → Iska matlab ye cookie sirf HTTPS connection pe bheji jayegi (ngrok free app pe ye kaam karega kyunki wo https hota hai).
 
 // sameSite: 'Lax' → Browser ko batata hai ki ye cookie same site requests ke saath bhejna safe hai (cross-site request me kab bhejna hai ye control karta hai).
@@ -356,11 +362,12 @@
 // };
 
 
+// Deep link 
+// Deep link ek special URL hoti hai jo directly app ke specific screen/page ko open karti hai.
 
+// Normal link vs Deep link
 
-
-
-
+// Normal link (web): Agar aap browser me ye URL daalo:
 
 
 

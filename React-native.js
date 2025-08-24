@@ -128,6 +128,39 @@
 // ye isliye hota he jese khuch text likhna ho to iska use karte he
 // aur isme onPress event use kar sakte he
 
+//  <Text
+//    style={{
+//      fontSize: 12,
+//      fontWeight: '600',
+//      color: focused ? '#C7A348' : 'gray',
+//      marginTop: 3,
+//      textAlign: 'center',
+//      includeFontPadding: false,
+//      width: '100%',
+//    }}
+//    numberOfLines={1}            // prevents breaking
+//    ellipsizeMode="clip"       // ensures full word shows, no "..."
+//  ></Text>
+
+// Inputfield component
+// <TextInput
+  //  style={styles.input}
+  //  value={potName}
+  //  onChangeText={setPotName}
+  //  placeholder="Enter your pot name"
+  //  placeholderTextColor="rgba(193, 153, 69, 0.6)"
+  //  disableFullscreenUI={true}        // for hide text bar
+  //  autoCorrect={false}               // no auto-correction
+  //  autoCapitalize="none"             // don’t auto capitalize
+  //  keyboardType="visible-password"   // disables prediction bar
+  //  importantForAutofill="no"         // stop autofill
+  //  autoComplete="off" 
+  // contextMenuHidden={true}  
+  // secureTextEntry={true}             // for dots
+// />
+
+
+
 // Button component
 // isme button ko ese likhte he
 // <Button title='press here'></Button>
@@ -140,13 +173,27 @@
 // if we dont use SafeAreaProvider
 // React Native ko pata hi nahi chalega ki safe area kaunsa hai.Tumhara header, tab bar, ya koi bhi content status bar ke peeche chala jayega.iPhone notch ya Dynamic Island ke peeche content cut ho sakta hai
 
+// ScrollView isko lagake kisi bhi component ko scrollable bana sakte he
+// <ScrollView
+//   ref={scrollViewRef}
+//   horizontal                // isse horizontally scroll kar sakte he
+//   pagingEnabled             // iska use karke slidable ban sakte he
+//   showsHorizontalScrollIndicator={false}
+//   onMomentumScrollEnd={onScrollEnd}    // jab scroll end hoga to ye chal jayga aur isme argument nahi pass karne ki zarurat nahi padti apne aap event pohoch jata he
+// ></ScrollView>
 
 // KeyboardAvoidingView
 // KeyboardAvoidingView ka kaam hai screen ko upar shift karna ya resize karna jab keyboard dikhta hai.
-// behavior – Ye decide karta hai ki view kaise adjust hoga aur ye iski values "padding" ye top padding add karke content upar karega.Aur"height" ye view ki height chhoti kar dega.
+// behavior – Ye decide karta hai ki view kaise adjust hoga aur ye iski values "padding" ye iphone ke liye he aur ye bottom pe padding add karke content upar karega.Aur"height" ye android ke liye he aur ye view ki height chhoti kar dega aur undefined karte he to systgem handle karta he
+
+// React Native me jab tum console.log(pot.image) karte ho, to wo number dikhata hai (jaise 2, 3, 4), lekin wo actually local image ka internal reference hota hai. Ye React Native ka normal behavior hai.
 
 // isme console.log nahi hota isme debugger hota he jisme error dekhte he
 // aur isme ek method hota he console.warn() ye console.log ki tarah kaam karta bas ye screen pe dikhata he
+// npx react-native log-android  isse logs terminal pe dekh sakte he
+
+// And  for debugging check we should use reactotron instead of flipper
+// and we also use santry for debugging in react native
 
 // aur isme hooks same hote he react ki tarah isme bhi hooks ko react library se import karna padta he
 
@@ -177,20 +224,6 @@ backgroundColor:"black",
 
 // aur agar ek se zada class use karna hoto ese karenge
 <Text style={[styles.textstyle,styles.container,{fontSize:10}]} >Hello World</Text>
-
-
-// isme is tarike se inputs likhte he
-// <TextInput
-// value={name}
-// style={styles.textInput}
-// placeholder='Enter Your name'
-// />
-
-// ye event bas text input me kaam karta he
-// onChangeText={(v)=>{setname(v)}}
-
-// ye password input ke liye hota he
-// secureTextEntry={true}
 
 
 // Form in React-Native
@@ -480,7 +513,7 @@ backgroundColor:"black",
 
 // and for type script we have to add this file 
 // nativewind-env.d.ts and my-app.d.ts
-// and add this line into bhot this file
+// and add this line into boht this file
 // <reference types="nativewind/types"/>
 
 
@@ -498,10 +531,54 @@ backgroundColor:"black",
 // <View>
 // <StatusBar
 // backgroundColor="orange"
-// barStyle="dark-content"   isse icons ka color black ho jata he
-// hidden={true}             isse pura status bar hide ho jata he
+// barStyle="dark-content"  // isse icons ka color black ho jata he
+// hidden={true}            // isse pura status bar hide ho jata he
 //  />
 // </View> 
+
+// this is how we add status bar globally
+// return (
+//   <>
+//      <StatusBar
+//       barStyle="dark-content"   // options: "light-content", "dark-content"
+//       backgroundColor="#fff" // background color of status bar (Android only)
+//     />
+//   <PotsStackNav.Navigator screenOptions={{ headerShown: false }}>
+//     <PotsStackNav.Screen name="PotsMain" component={Pot} />
+//     <PotsStackNav.Screen name="PotsDetails" component={PotsDetails} />
+//     <PotsStackNav.Screen name="Addpot" component={Addpot} />
+//   </PotsStackNav.Navigator>
+//   </>
+// );
+
+// and this is for per screen
+// import { StatusBar } from "react-native";
+// 
+// function Addpot() {
+//   return (
+//     <>
+//       <StatusBar barStyle="dark-content" backgroundColor="#F5F5F5" />
+//       {/* Screen UI */}
+//     </>
+//   );
+// }
+
+// iOS doesn’t allow changing the status bar background color directly (it’s always transparent).
+// On iOS, the background comes from the parent screen/view’s background color behind the status bar.
+// If you want iOS to also appear white, you should set your screen/container background to white at the top.
+// like this
+//<SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
+//      <StatusBar
+//       barStyle="dark-content"   // options: "light-content", "dark-content"
+//       backgroundColor="#fff" // background color of status bar (Android only)
+//     />
+//   <PotsStackNav.Navigator screenOptions={{ headerShown: false }}>
+//     <PotsStackNav.Screen name="PotsMain" component={Pot} />
+//     <PotsStackNav.Screen name="PotsDetails" component={PotsDetails} />
+//     <PotsStackNav.Screen name="Addpot" component={Addpot} />
+//   </PotsStackNav.Navigator>
+//</SafeAreaView>
+
 
 // platform in React Native
 // iska matlab aap phone pe konsa operating system use kar rahe ho android ya ios ya windows
@@ -511,4 +588,15 @@ backgroundColor:"black",
 
 // npm i react-native-webview 
 // ye karne se koisi bhi web app me pe dekh sakte he
+// jese agar user ko ek offer page ya terms & conditions page website se dikhana ho → wo page WebView me load kar dete hain.
 
+
+// shadow properties
+// iOS Shadow
+// shadowColor: '#000',
+// shadowOffset: { width: 0, height: 2 },
+// shadowOpacity: 0.05,
+// shadowRadius: 3,
+
+// Android Shadow
+// elevation: 3,
