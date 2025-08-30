@@ -422,9 +422,24 @@ backgroundColor:"black",
 //  <View/>
 // <Modal/>
 
-// pressable Event
+// pressable component
 // aur ye tab use karte he jab button pe multiple events lagana ho
 // isme 4 event hote he onpress , onpressin , onpressout ,onpresslong
+// and we should use Pressable component instead of View component
+
+
+// GestureHandlerRootView component
+// GestureHandlerRootView is just like a normal <View>, but it is required so that swipe, drag, and touch gestures work properly in React Native.
+// If you don’t wrap your app (or screen) inside it → gestures won’t work and you get that red error.
+// So basically:
+// Use <View> → for normal UI.
+// Use <GestureHandlerRootView> → when you need gesture support (drag, swipe, bottom sheet, etc.).
+// Usually, you wrap your whole app once in App.js inside GestureHandlerRootView and you’re done.
+// npm install react-native-gesture-handler
+// Note: e.stopPropagation() only works if you’re using react-native-gesture-handler components (Pressable, TouchableOpacity, etc. from react-native-gesture-handler).
+// so first we need to import presaable and TouchableOpacity from react-native-gesture-handler and then wrap code with this component and then we can use e.stopPropagation() 
+// so Pressable component of react-native-gesture-handler has same properties like react native Pressable component 
+
 
 
 // Apply NativeWind in react native
