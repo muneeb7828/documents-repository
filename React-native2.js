@@ -365,11 +365,3 @@
 // Deep link 
 // Deep link ek special URL hoti hai jo directly app ke specific screen/page ko open karti hai.
 
-// Normal link vs Deep link
-
-// Normal link (web): Agar aap browser me ye URL daalo:
-
-
-
-
-

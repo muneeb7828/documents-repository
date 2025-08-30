@@ -413,6 +413,7 @@ backgroundColor:"black",
 
 // Modal in react native
 // ye pop up ke liye hota he aur bydefault puri height cover kar leta he to jo text likha hota he to hide hojata he to hide se hatane ke liye isko transparent={true} karna padta he
+// and if we wrap Modal inside ScrollView so this makes screen issues 
 
 // <Modal transparent={true}>
 //  <View>
@@ -532,6 +533,10 @@ backgroundColor:"black",
 // <reference types="nativewind/types"/>
 
 
+// For Animation we use React Native Reanimated library
+
+
+
 // this is for phone connect
 // usb connect and in phone developer is on and
 // adb kill-server
@@ -616,3 +621,22 @@ backgroundColor:"black",
 
 // Android Shadow
 // elevation: 3,
+
+
+// Alert in React Native
+// Alert.alert("Pot Created", "Your saving pot has been created successfully!", [
+//   { text: "OK", onPress: () => navigation.navigate("MainTabs") }
+// ]);
+
+
+// useIsFocused()
+// useIsFocused() is a React Navigation hook.
+// When to use it?
+// Refreshing data when user comes back to the screen.
+// Starting/stopping animations depending on focus.
+// Resetting form fields when screen becomes active.
+// Pausing API calls or timers when leaving the screen.
+// When I say active and visible, I mean the screen is the one currently on top in the navigation stack (the one the user can actually see).
+// How to use 
+// import { useIsFocused } from '@react-navigation/native';
+// const isFocused = useIsFocused();

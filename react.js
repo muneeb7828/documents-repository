@@ -257,7 +257,9 @@ let [currentvalue,dispatch]=useReducer(reducer,initialvalue)
 
 
 
-
+// if we are taking more objects while destructuring and we only need 1 to 2 thing
+// This makes the code heavier than needed.
+// Only destructure what you use:
 
 
 
