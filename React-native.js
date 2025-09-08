@@ -123,6 +123,7 @@
 // View doesn't support onPress in React Native.
 // To make a non-button component respond to taps, you must wrap it in a TouchableOpacity, TouchableWithoutFeedback, or Pressable.
 
+// In React Native, the disabled prop on touchable components like TouchableOpacity, Pressable, or Button tells React Native:If disabled={true} →The button won’t respond to touch presses.onPress won’t fire.
 
 // Text component 
 // ye isliye hota he jese khuch text likhna ho to iska use karte he
@@ -167,6 +168,7 @@
 
 // SafeAreaView component
 // ye View ki tarah hota he bas ye top se aur bottom se cheezon ko hata deta
+// and SafeAreaProvider without this SafeAreaView would not know the safe area insets.
 
 // SafeAreaProvider component
 // iOS (aur kuch Android phones) mein screen ke kuch hisse hote hain jaha pe tumhara app ka content nahi aana chahiye — jaise:Notch (iPhone X se shuru) , Rounded Corners ,Dynamic Island (iPhone 14 Pro+) ,Status Bar / Navigation gestures area (Android phones mein)
@@ -640,3 +642,36 @@ backgroundColor:"black",
 // How to use 
 // import { useIsFocused } from '@react-navigation/native';
 // const isFocused = useIsFocused();
+
+
+// width -scale(40)
+// scale(40) is not React Native built-in. It usually comes from a helper library like react-native-size-matters or a custom scaling utility.
+// What scale(40) means
+// The idea is: different devices have different screen widths/heights & pixel densities.
+// If you hardcode 40, it might look small on a tablet but big on a small phone.
+// scale(40) takes 40 as a design size and converts/scales it so it looks proportional on any screen.
+
+// How scale() is defined
+
+// import { Dimensions } from "react-native";
+// const { width } = Dimensions.get("window");
+
+// This is the "guideline width" your designs were made for
+// const guidelineBaseWidth = 375; // iPhone X width
+
+// export function scale(size) {
+//   return (width / guidelineBaseWidth) * size;
+// }
+// to jab scale(40) karte he to ye function call hojata he
+
+// scale(20) → increases/decreases based on screen width.
+// verticalScale(10) → scales based on screen height.
+// moderateScale(14) → balanced scaling, not too big/small.
+
+
+// agar hame dekhna he ki ye AddMoneyModal file kaha use ho rahi folder me to ye command likhenge
+// Get-ChildItem -Recurse | Select-String "AddMoneyModal"
+
+
+
+

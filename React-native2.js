@@ -184,7 +184,8 @@
 // routes: [{ name: 'Login' }]:
 // This defines a new route stack — here, you're only adding the Login screen.
 
-
+// ()=>navigation.navigate("Pots", { screen: "Addpot",params: { from: "HomeScreen" } })
+// if we want to Navigate screen to the screen where lots of screen are present in a different funtion
 
 // async storage in react native
 // jab bhi kuch app me store karna hoto iska use karte he aur ye library hoti he to isko install karna hota he aur ye local storage ki tarah hota he  

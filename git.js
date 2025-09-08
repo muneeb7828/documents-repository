@@ -332,6 +332,8 @@
 // git push origin newbranch --force
 // isse agar kuch error araha ho push nahi ho rahi ho to is command se hojaygi
 
+// git clone -b branch-name --single-branch https://github.com/username/repo.git
+// isse particularly single branch clone kar sakte he
 
 // Git hub:-
 
