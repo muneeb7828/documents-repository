@@ -201,6 +201,8 @@
 
 // aur isme props bhi same hi hote he
 
+// onpress event
+// agar onpress parent pe laga he aur child pressable he to agar child pe onpress nahi bhi laga to aur uspe click karenge parent wala trigger nahi hoga aur child component View he to parent trigger hojayga
 
 // css in react-native
 
@@ -644,6 +646,23 @@ backgroundColor:"black",
 // const isFocused = useIsFocused();
 
 
+// responsive screen in react native:-
+// const { width, height } = Dimensions.get("window");
+// const scale = (size) => (width / 375) * size;
+// const verticalScale = (size) => (height / 812) * size;
+// const moderateScale = (size, factor = 0.5) =>
+//   size + (scale(size) - size) * factor;
+// headerBar: {
+//   width: "100%",
+//   paddingVertical: verticalScale(22),
+//   paddingHorizontal: moderateScale(15),
+//   flexDirection: "row",
+//   alignItems: "center",
+//   justifyContent: "space-between",
+//   marginBottom: verticalScale(15),
+// },
+
+
 // width -scale(40)
 // scale(40) is not React Native built-in. It usually comes from a helper library like react-native-size-matters or a custom scaling utility.
 // What scale(40) means
@@ -671,6 +690,90 @@ backgroundColor:"black",
 
 // agar hame dekhna he ki ye AddMoneyModal file kaha use ho rahi folder me to ye command likhenge
 // Get-ChildItem -Recurse | Select-String "AddMoneyModal"
+
+
+// why use usememo hook
+
+// const filteredTx = useMemo(() => {
+//   return transactions.filter((tx) => tx?.fromWalletId === pot.id || tx?.toWalletId === pot.id);
+// }, [transactions, pot.id]);
+
+// What it does: Runs the filter only when transactions or pot.id change.
+// Purpose: Avoids recalculating filteredTx on every render (which can be costly if transactions is large).
+// if we dont use this usememo hook AND USE useeffect hook so what will happen we will need an extra usestate and a re-render.
+// useMemo → for calculations inside render (lightweight, no extra state, no side-effect).
+// useEffect → for side-effects outside render (API calls, subscriptions, DOM changes, updating state). 
+// Need a value? → useMemo
+// Need to do something? → useEffect
+
+// why use useCallback hook
+
+// const filterTx = useCallback(() => {
+//   return transactions.filter(
+//     (tx) => tx?.fromWalletId === pot.id || tx?.toWalletId === pot.id
+//   );
+// }, [transactions, pot.id]);
+
+// What it does: Returns a memoized function.
+// The function filterTx will be referentially stable (same identity) until transactions or pot.id change.
+// It does not return the value directly — it returns a function you can call later.
+
+
+
+// send data to contextapi file
+
+// How React Navigation works by default
+// Normally, you can only navigate like this:
+
+// function SomeScreen({ navigation }) {
+//   return (
+//     <Button
+//       title="Go"
+//       onPress={() => navigation.navigate('Details')}
+//     />
+//   );
+// }
+
+//but this only works inside a screen that React Navigation has already provided with a navigation prop.
+// If you're in:A Redux action and Context API function and A utility file and network request callback you don’t have direct access to navigation. That’s where RootNavigation comes in.
+
+// This is how RootNavigation file made
+
+// import { createNavigationContainerRef } from '@react-navigation/native';
+
+// export const navigationRef = createNavigationContainerRef();
+
+// export function navigate(name, params) {
+//   if (navigationRef.isReady()) {     // Ensures NavigationContainer has mounted and The isReady() check prevents crashes if you call navigation before the app has finished mounting the NavigationContainer.
+//     navigationRef.navigate(name, params);
+//   }
+// }
+
+// createNavigationContainerRef() creates a reference to your NavigationContainer.
+
+
+// App.js
+// import { NavigationContainer } from '@react-navigation/native';
+// import { navigationRef } from './RootNavigation';
+
+// export default function App() {
+//   return (
+//     <NavigationContainer ref={navigationRef}>
+//       {/* your stacks/tabs */}
+//     </NavigationContainer>
+//   );
+// }
+// Now navigationRef points to your navigator globally.
+
+// How it works
+// import { navigationRef } from './RootNavigation';
+// export function goToDetails(data) {
+//   if (navigationRef.isReady()) {
+//     navigationRef.navigate('TransactionDetailsScreen', { data });
+//   } else {
+//     console.log('Navigation is not ready yet.');
+//   }
+// }
 
 
 
