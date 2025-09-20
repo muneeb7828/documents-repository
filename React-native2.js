@@ -187,6 +187,13 @@
 // ()=>navigation.navigate("Pots", { screen: "Addpot",params: { from: "HomeScreen" } })
 // if we want to Navigate screen to the screen where lots of screen are present in a different funtion
 
+// this is also we can navigate
+// import { CommonActions } from '@react-navigation/native';
+// // Always navigate back to Home tab safely
+// navigation.dispatch(
+//   CommonActions.navigate({ name: 'MainTabs', params: { screen: 'Home' } })
+// );
+
 // async storage in react native
 // jab bhi kuch app me store karna hoto iska use karte he aur ye library hoti he to isko install karna hota he aur ye local storage ki tarah hota he  
 // isme bhi same methods hote he setItem() , getItem() , remove() bas localstorage ki jagah AsyncStorage likhte he aur time leta he aane me to isko async function me likhte he

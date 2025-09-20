@@ -776,5 +776,35 @@ backgroundColor:"black",
 // }
 
 
+// Referesh screen in react native
+
+// There are two options to refressh it first FlatList and onether is Using RefreshControl with ScrollView or FlatList
+
+// Using FlatList’s built-in refreshing + onRefresh.Easiest if you are already rendering your list with FlatList.You pass a refreshing boolean and an onRefresh function.Works only if your UI is a FlatList or SectionList.
+
+// <FlatList
+//   data={transactions}
+//   keyExtractor={(item, index) => String(item.transactionId || index)}
+//   renderItem={renderItem}
+//   contentContainerStyle={{ padding: scale(15) }}
+//   ListEmptyComponent={
+//     <Text style={{ textAlign: "center", marginTop: 30 }}>
+//       No transactions found
+//     </Text>
+//   }
+//   refreshing={refreshing} 
+//   onRefresh={handleRefresh}  
+// />
+
+// Using RefreshControl with ScrollView or FlatList
+
+    // <ScrollView
+    //   refreshControl={
+    //     <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+    //   }
+    // >
+    //   <Text>Pull down to refresh</Text>
+    // </ScrollView>
+
 
 
