@@ -546,6 +546,10 @@ backgroundColor:"black",
 // adb kill-server
 // adb start-server
 // adb devices
+// adb tcpip 5555
+// adb shell ip route
+// adb connect 192.168.1.4:5555
+
 
 // Status Bar in React native
 // ye jo phone me top pe icons dikhte he usi ko status bar bolte he
@@ -602,6 +606,42 @@ backgroundColor:"black",
 //     <PotsStackNav.Screen name="Addpot" component={Addpot} />
 //   </PotsStackNav.Navigator>
 //</SafeAreaView>
+
+
+// if the above is not work so then we will use this
+
+// for statusbar and this is only work which is not in potstack
+// const useAppStatusBar = (backgroundColor, barStyle = "dark-content") => {
+//   useFocusEffect(
+//     useCallback(() => {
+//       // When screen is focused
+//       StatusBar.setBackgroundColor(backgroundColor);
+//       StatusBar.setBarStyle(barStyle);
+
+//       return () => {
+//         // When screen is unfocused → reset to default
+//         StatusBar.setBackgroundColor(defaultStatusBar.backgroundColor);
+//         StatusBar.setBarStyle(defaultStatusBar.barStyle);
+//       };
+//     }, [backgroundColor, barStyle])
+//   );
+// };
+
+// this statusbar works in all screens except potstack
+// // useAppStatusBar("#ffffff", "dark-content");
+
+// for potsack 
+// useFocusEffect(
+//   useCallback(() => {
+//     const timeout = setTimeout(() => {
+//       StatusBar.setBarStyle('dark-content', true);             // Use the second argument true to force update on Android.
+//       StatusBar.setBackgroundColor('#ffffff', true);
+//     }, 50);
+
+//     return () => clearTimeout(timeout);
+//   }, [])
+// );
+
 
 
 // platform in React Native
