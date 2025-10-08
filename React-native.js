@@ -549,7 +549,7 @@ backgroundColor:"black",
 // adb tcpip 5555
 // adb shell ip route
 // adb connect 192.168.1.4:5555
-
+// adb disconnect 192.168.29.18:5555
 
 // Status Bar in React native
 // ye jo phone me top pe icons dikhte he usi ko status bar bolte he
@@ -847,4 +847,5 @@ backgroundColor:"black",
     // </ScrollView>
 
 
-
+// from this command we can delete the app and we get the nama from android/app/build.gradle this file
+// adb uninstall com.firstproject

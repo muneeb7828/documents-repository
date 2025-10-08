@@ -519,6 +519,9 @@ console.log(closewindow)
 // The payment gateway securely takes your card info, talks to the bank, confirms payment, and tells Amazon → “Payment successful”.
 
 
+// Complete information about Akamai
+// https://gamma.app/docs/Akamai-CDN-nkd0c9hltskghx7
 
-
+// Complete information about Nginx
+// https://gamma.app/docs/Understanding-NGINX-The-Modern-Web-Server-5dcv1iydr83alrx
 
