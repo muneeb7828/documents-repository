@@ -220,6 +220,9 @@
 
 
 // this is for android app installation
+
+// keytool -genkey -v -keystore my-upload-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
+// from this command keystore file file will generate so that file we need transfer to android/app and then in app folder file name build.gradle we need to change that
 // build apk
 // cd android
 // ./gradlew assembleRelease

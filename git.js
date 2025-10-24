@@ -178,7 +178,13 @@
 // git restore
 // git restore isse working directory se jo staging area me add thi vo wapas working directory me chali jati he
 
+// git merge --abort
+// This command is made specifically for canceling an ongoing merge.
+// It: Restores everything (staged + unstaged) to the exact pre-merge state. Removes the MERGING state from Git.Cleans up all temporary merge data safely. Use this when a merge is in progress.
 
+// git reset --hard HEAD
+// if You want to nuke everything and go 100% clean
+// Full reset (be careful, this deletes all changes)
 
 // alias
 // alias iska use karke kisi bhi command ko short kar sakte he
@@ -335,6 +341,13 @@
 // git clone -b branch-name --single-branch https://github.com/username/repo.git
 // isse particularly single branch clone kar sakte he
 
+// git log --oneline --graph --decorate --all
+// this is for when we want to check all commits 
+
+// This is for when we want to go back to privios commit but before apply to this first add new branch and then run this
+// git reset --hard e22e97c
+
+
 // Git hub:-
 
 // push
@@ -378,8 +391,20 @@
 
 
 
-// githib conflits
+// github conflits
 
+// How Git decides when to show a conflict
+// Git only raises a conflict when:
+// The same file was edited in both branches in the same lines, or
+// The same section of a file was changed differently.
+// If: You added different lines in different parts of the file, or
+// One branch edited a file while the other branch didn’t,
+// then Git can automatically merge without conflict — it merges those safely.
+
+
+// this is for preventing auto conflict while pulling and merging branch
+// git pull --no-commit --no-ff origin abdullah
+// git merge --no-commit --no-ff origin/abdullah
 
 
 // github desktop
@@ -387,6 +412,10 @@
 // github actions and ci cd pipeline
 
 
+// if git shows up to date after run this command git pull origin branchname and commit history is same so
+// Git merges commits, not files.
+// If both branches have the same last commit hash → Git believes everything is already merged.
+// Even if you edit files locally, until you git commit and git push, Git doesn’t see those changes.
 
 
 

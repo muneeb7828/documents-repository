@@ -849,3 +849,16 @@ backgroundColor:"black",
 
 // from this command we can delete the app and we get the nama from android/app/build.gradle this file
 // adb uninstall com.firstproject
+
+// change name in react native app
+
+// for android
+// android/app/src/main/res/values/strings.xml
+
+// for ios
+// ios /appnmae/infoplist
+// <key>CFBundleDisplayName</key>
+// <string>Sundukpay</string>
+
+
+
