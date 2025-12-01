@@ -551,6 +551,31 @@ backgroundColor:"black",
 // adb connect 192.168.1.4:5555
 // adb disconnect 192.168.29.18:5555
 
+
+// This is also for phone connect but without usb cable
+// ✅ Step 1 — Allow wireless debugging
+//   On that popup:
+// ✔ Tick “Always allow on this network”
+// ✔ Tap ALLOW
+// ✅ Step 2 — Open the Wireless Debugging menu
+// Inside Developer Options:
+// Tap Wireless debugging
+// Tap Pair device with pairing code
+// It will show you something like:
+// IP:Port → e.g. 192.168.1.4:49213
+// Pairing code → e.g. 123456
+// ✅ Step 3 — Pair ADB (One time only)
+// On your laptop run:
+// adb pair 192.168.1.4:49213
+// Enter the 6-digit pairing code from your phone.
+// You will see: 
+// Successfully paired to 192.168.1.4:49213
+// ✅ Step 4 — Connect ADB wirelessly
+// adb connect 192.168.1.4:5555
+// You will see:
+// connected to 192.168.1.4:5555
+
+
 // Status Bar in React native
 // ye jo phone me top pe icons dikhte he usi ko status bar bolte he
 // iska use karke styling change kar sakte he status bar ki
@@ -861,4 +886,14 @@ backgroundColor:"black",
 // <string>Sundukpay</string>
 
 
+
+// Use cases of moderateScale & scale & verticalScale
+// import { scale, verticalScale, moderateScale } from "react-native-size-matters";
+
+// Font sizes                                      moderateScale(size)
+// Paddings / Margins (horizontal)	               scale(size)
+// Vertical spacing (top/bottom gaps)   	         verticalScale(size)
+// Icons / square dimensions	                     scale(size)
+// Circular avatars / radius	                     scale(size)
+// Line height	verticalScale(size) or sometimes   moderateScale(size)
 

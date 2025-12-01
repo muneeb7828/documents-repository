@@ -338,7 +338,7 @@
 // git push origin newbranch --force
 // isse agar kuch error araha ho push nahi ho rahi ho to is command se hojaygi
 
-// git clone -b branch-name --single-branch https://github.com/username/repo.git
+// git clone -b branch-name --single-branch https://github.com/muneeb3778/Updated-Sundukpay.git
 // isse particularly single branch clone kar sakte he
 
 // git log --oneline --graph --decorate --all
