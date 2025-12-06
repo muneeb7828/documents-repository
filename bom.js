@@ -525,3 +525,12 @@ console.log(closewindow)
 // Complete information about Nginx
 // https://gamma.app/docs/Understanding-NGINX-The-Modern-Web-Server-5dcv1iydr83alrx
 
+
+
+// fefo (quee)
+// first in first out 
+
+// stack
+// last in first out
+
+

@@ -229,6 +229,17 @@
 // au iske baad zip file me convert karke dena hota he
 
 
+// Use assembleRelease
+// ✔ Before uploading to Play Store
+// ✔ For production builds
+// ✔ For sharing final APK with users
+
+// Use assembleDebug
+// ✔ During development
+// ✔ For testing
+// ✔ For emulator/device testing with logs
+
+
 // is command se console log terminal pe khul jata he
 // npx react-native log-android
 
