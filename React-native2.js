@@ -265,6 +265,22 @@
 // 🔴 APK: downloads everything (heavy)
 // 🟢 AAB: downloads only what that device needs (lightweight)
 
+// This is for to merge code to master for git actions 
+// Step 9: PR is now mergeable
+// GitHub will show:
+// ✅ No conflicts
+// 🟢 Merge button enabled
+// Click Merge Pull Request
+// 🎯 Summary (easy version)
+
+// git checkout master
+// git pull
+// git checkout branch
+// git merge master
+// Fix conflicts in VS Code
+// git add .
+// git commit
+// git push
 
 
 // is command se console log terminal pe khul jata he
