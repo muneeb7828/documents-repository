@@ -240,6 +240,33 @@
 // ✔ For emulator/device testing with logs
 
 
+// What is AAB (Android App Bundle)?
+// AAB = Android App Bundle
+// It is not an installable file like APK.
+// Instead, it’s a publishing format used by Google Play Store.
+// APK vs AAB (Simple Comparison)
+// APK	AAB
+// Installed directly on phone	❌ Cannot be installed directly
+// Contains everything	✅ Google builds optimized APKs
+// Bigger size	✅ Smaller app size
+// Used for testing / sharing	✅ Required for Play Store
+// 🧠 How AAB Works (Simple Flow)
+// You upload AAB → Google Play → Play Store creates APKs → User downloads
+// 👉 The user never downloads the AAB
+// 👉 Google converts AAB into APK automatically
+// Why Google REQUIRES AAB
+// Since Aug 2021, Google Play requires AAB for:New apps
+// App updates
+// This allows:
+// Smaller app size Faster downloads
+// Device-specific APKs (only what device needs)
+// 🔹 Example
+// Your app includes:Arabic languageHindi languageTablet supportPhone support
+// 🔴 APK: downloads everything (heavy)
+// 🟢 AAB: downloads only what that device needs (lightweight)
+
+
+
 // is command se console log terminal pe khul jata he
 // npx react-native log-android
 
