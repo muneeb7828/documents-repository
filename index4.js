@@ -358,6 +358,120 @@ console.log(sumsquare);
 
 
 
+// question 6 which is maximum element use in this array and count that all element 
+// Arr=[1,1,2,2,1,2,1]
+
+// const Arr=[1,1,2,2,2,2,1]
+
+// let arr2 = []
+
+
+// Arr.forEach((v,i)=>{
+//     arr3 = []
+//  Arr.forEach((p,i2)=>{
+//     if(v === p ){
+//      arr3.push(p)        
+//     }
+
+//   })
+
+
+//   arr2.push(arr3) 
+   
+// })
+
+// let checkmaxnum = arr2[0]
+
+// arr2.forEach((v,i)=>{
+
+//    if (checkmaxnum.length < v.length ){
+//     checkmaxnum = v 
+//    }
+// })
+
+
+// console.log(checkmaxnum);
+
+
+// console.log(`This is the maximun number ${checkmaxnum[0]} this is the total count of a arr = ${checkmaxnum.length}`);
+
+
+
+
+
+
+
+let arr=[1,1,2,2,1,2,1]
+
+
+let arr2 =[]
+
+for(let i = 0; i< arr.length;i++){
+   arr[i]
+   let arr3=[]
+for(let p=0;p<arr.length;p++){
+   if(arr[i]===arr[p]){
+    arr3.push(arr[p])
+   }
+}
+   arr2.push(arr3)
+
+  }
+
+
+
+let checkmax = arr2[0]
+for(let a= 0;a < arr2.length;a++){
+    if(checkmax.length<arr2[a].length){
+         checkmax=arr2[a]
+         
+    }
+    
+}
+console.log(`This is the maximun number ${checkmax[0]} this is the total count of a arr = ${checkmax.length}`);
+
+
+
+
+
+let Arr5=[-3,-2,0,-7,25,12,-11]
+
+
+let nums=0
+let check=0
+
+
+Arr5.forEach((v,i) => {
+  if(v>0){
+   check++ 
+nums+=v
+  }
+
+
+});
+
+console.log((nums / check));
+ 
+
+
+
+    
+let Arr10=[1,3,4,2,9]
+
+
+let num10=Arr10[0]
+
+for (let i =0 ; i<Arr10.length;i++){
+
+  if(num10 + Arr10[i] == 6){
+     console.log(`${num10} ${Arr10[i]} = ${num10 + Arr10[i]}`)
+  }
+num10 = Arr10[i]
+
+}
+
+
+
 
 
 
