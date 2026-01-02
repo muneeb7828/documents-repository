@@ -472,6 +472,137 @@ num10 = Arr10[i]
 
 
 
+let Arrr=[1,2,1,3,4,2,9]
+ 
+let k=3
+
+let nu = []
+
+
+Arrr.forEach((v,i,fullarray) => {
+
+fullarray.splice(i,1)
+
+console.log(fullarray);
+
+if(!fullarray.includes(v)){
+  nu.push(i)
+}  
+
+fullarray.splice(i,0,v)
+
+
+});
+
+
+console.log(Arrr[nu[k-1]]);
+
+
+// calculate the odd and even number
+
+
+number12=[1,2,3,45,35,56,71,31,41]
+
+number12.forEach((v,i,pura) => {
+  if(v%2==0){
+   console.log(v,"even")
+  }
+else{
+  console.log(v,"odd")
+}
+
+});
+
+
+// calculate the sum of 2 big numbers in array
+
+
+let array14 = [45,2,3,1,35,56,71,31,41]
+
+let array15 = []
+
+array14.forEach((v,i)=>{
+  
+  let numb = {value:v,index:i}
+
+  array14.forEach((p,ind)=>{
+    if(numb.value>=p){
+       numb = {value:p,index:ind}   
+    }
+  })
+  array15.push(numb.value)
+
+  array14.splice(numb.index,1,23002323023)
+
+})
+
+
+
+console.log(array15);
+
+
+
+console.log(array15[array15.length-1] + array15[array15.length-2]);
+
+
+// [0][0],[1][0],[2][0]
+// [0][1],[1][1],[2][1]
+// [0][2],[1][2],[2][2]
+
+let array16 =[
+  [2,4,1],
+  [10,5,11],
+  [18,7,6]
+]
+console.log(array16);
+
+array16[0][0] = array16[0][0]
+array16[0][1] = array16[1][0]
+array16[0][2] = array16[2][0]
+
+array16[1][0] = array16[0][1]
+array16[1][1] = array16[1][1]
+array16[1][2] = array16[2][1]
+
+array16[2][0] = array16[0][2]
+array16[2][1] = array16[1][2]
+array16[2][2] = array16[2][2]
+
+
+console.log(array16);
+
+
+
+
+
+
+
+
+let array17 = [-1,0,2,1,4,-3,3]
+
+let checksum=[]
+
+array17.forEach((v,i)=>{
+
+array17.forEach((p,ind)=>{
+if(i !== ind){
+  if(v + p == 0){
+  checksum.push({First:v,SecondValue:p})
+  }
+}
+
+})
+
+})
+
+console.log(checksum)
+
+
+
+
+
+
+
 
 
 

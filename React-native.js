@@ -872,7 +872,7 @@ backgroundColor:"black",
     // </ScrollView>
 
 
-// from this command we can delete the app and we get the nama from android/app/build.gradle this file
+// from this command we can delete the app and we get the name from android/app/build.gradle this file
 // adb uninstall com.firstproject
 
 // change name in react native app
@@ -897,3 +897,11 @@ backgroundColor:"black",
 // Circular avatars / radius	                     scale(size)
 // Line height	verticalScale(size) or sometimes   moderateScale(size)
 
+
+
+// FormData in React Native
+// https://chatgpt.com/share/69575c67-4ea4-800c-9a7e-637cf7f658a6
+
+
+// File upload in react native
+// https://chatgpt.com/share/695766c6-31f4-800c-95af-c2e1307c53b2
