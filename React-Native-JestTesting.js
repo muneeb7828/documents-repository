@@ -5,3 +5,7 @@
 
 // This is the flow of jest testing
 // https://chatgpt.com/share/69623acd-fd14-800c-841f-bdad3219d855
+
+
+// This is very important information about jest 
+// https://chatgpt.com/share/69623acd-fd14-800c-841f-bdad3219d855
