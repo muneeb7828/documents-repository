@@ -905,3 +905,10 @@ backgroundColor:"black",
 
 // File upload in react native
 // https://chatgpt.com/share/695766c6-31f4-800c-95af-c2e1307c53b2
+
+
+
+
+// This is a Flatlist property and this prevents parent scroll 
+// nestedScrollEnabled={true}
+// scrollEventThrottle={16}

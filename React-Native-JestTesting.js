@@ -9,3 +9,12 @@
 
 // This is very important information about jest 
 // https://chatgpt.com/share/69623acd-fd14-800c-841f-bdad3219d855
+
+
+
+// this command for check coverage for all
+// npx jest --coverage
+
+
+// this command for check coverage for specific file 
+// npx jest PaymentsScreen.test.js --coverage
