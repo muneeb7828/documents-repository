@@ -912,3 +912,54 @@ backgroundColor:"black",
 // This is a Flatlist property and this prevents parent scroll 
 // nestedScrollEnabled={true}
 // scrollEventThrottle={16}
+
+
+
+
+// This is for reduce app size in react native cli
+// needs to configured these 3 files 
+// android/build.gradle
+// app/build.gradle
+// gradle.properties
+// and needs to remove unused library by this command npm ls --depth=0
+// and push assets folder into vps and then fetch images from the vps server
+
+
+
+
+// difference between useFocusEffect and useIsFocused is that useIsFocused hook - this works for nested components! like if a component is inside the srollview container then useFocusEffect this will not work
+
+
+// In this below useeffect the return will work when we left the screen
+// useEffect(() => {
+//   console.log("[POT_INTERACTION] MOUNT (start session)", { potId, uuid });
+
+//   accumulatedMsRef.current = 0;
+//   sentRef.current = false;
+//   startTimer();
+
+//   const sub = AppState.addEventListener("change", (nextState) => {
+//     console.log("[POT_INTERACTION] AppState =>", nextState);
+//     if (nextState === "background" || nextState === "inactive") {
+//       stopTimerAndAccumulate();
+//     } else if (nextState === "active") {
+//       startTimer();
+//     }
+//   });
+
+//   return () => {
+//     console.log("[POT_INTERACTION] UNMOUNT (end session)");
+
+//     stopTimerAndAccumulate();
+//     const seconds = Math.floor(accumulatedMsRef.current / 1000);
+
+//     console.log("[POT_INTERACTION] Final total =>", { totalMs: accumulatedMsRef.current, seconds });
+
+//     if (!sentRef.current) {
+//       sentRef.current = true;
+//       sendPotInteraction(seconds);
+//     }
+
+//     sub?.remove?.();
+//   };
+// }, [startTimer, stopTimerAndAccumulate, sendPotInteraction, potId, uuid]);
