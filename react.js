@@ -263,4 +263,157 @@ let [currentvalue,dispatch]=useReducer(reducer,initialvalue)
 
 
 
+// nested routing in react
+
+
+
+// object.entries method
+// it use for when we need to convert object values into in array
+
+
+
+// difference between useState and useRef
+
+// 👉 useState → causes re-render when updated
+// 👉 useRef → does NOT cause re-render when updated
+
+// ✅ useState → UI related data
+// counter
+// form input
+// API data
+
+// 6. When SHOULD you use useRef?
+// 👉 Only when UI does NOT depend on it:
+// timers
+// previous values
+// DOM access
+// storing IDs
+// avoiding re-render
+
+
+
+// Waht is lazy loading in detail:-
+
+// Lazy loading is a technique where you load something only when it’s actually needed, instead of loading everything upfront.
+// In React (and React Native), it’s mainly used to improve performance and reduce initial load time 🚀
+// 🧠 Simple Idea
+// 👉 Instead of loading all components at once:
+// import HeavyComponent from './HeavyComponent';
+// 👉 You load it only when required:
+// const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
+
+// ⚡ Why Lazy Loading?
+// Without lazy loading:
+// App loads everything at start
+// Slower startup
+// Bigger bundle size
+
+// With lazy loading:
+// Load only what's needed
+// Faster initial render
+// Better performance
+
+// 🧩 How It Works in React
+// You use:
+// React.lazy() → to import component lazily
+// Suspense → to show fallback while loading
+
+// ✅ Basic Example
+// import React, { Suspense } from 'react';
+// const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
+// function App() {
+//   return (
+//     <Suspense fallback={<Text>Loading...</Text>}>
+//       <HeavyComponent />
+//     </Suspense>
+//   );
+// }
+
+// 🔄 Real Use Cases
+// 1. Route-based Lazy Loading (Most Common)
+// Load screens only when user navigates:
+// const HomeScreen = React.lazy(() => import('./HomeScreen'));
+// const ProfileScreen = React.lazy(() => import('./ProfileScreen'));
+// 2. Feature-based Loading
+
+// Load heavy features only when needed:
+// Charts 📊
+// Maps 🗺️
+// Video players 🎥
+
+
+// What is Code Splitting:-
+
+// 👉 Code splitting = breaking your app’s bundle into smaller chunks
+// Instead of one big JS file:
+// bundle.js (2MB) ❌
+// You get:
+// main.js (500KB)
+// home.chunk.js
+// profile.chunk.js
+// chart.chunk.js ✅
+
+// ⚡ Why Code Splitting?
+
+// Without it:
+// Entire app loads at once
+// Slower startup ⏳
+// Wasted resources (user may never visit some screens)
+
+// With it:
+// Load only required code
+// Faster initial load 🚀
+// Better performance
+
+// 🔗 Relationship with Lazy Loading
+// 👉 Think of it like this:
+// Code Splitting = Breaking code into pieces
+// Lazy Loading = Loading those pieces when needed
+
+// 💡 You usually use both together
+// 🧩 How Code Splitting Works in React
+// The most common way:
+// const Home = React.lazy(() => import('./Home'));
+// 👉 This does TWO things:
+// Splits Home into a separate file
+// Loads it only when needed
+
+
+
+
+
+// Diffence between useEffect hook and useLayoutEffect hook and When to Use What:-
+
+// ✅ Use useEffect (default choice)
+// Use it for:
+// API calls
+// Subscriptions (In React.js, subscriptions refer to a design pattern where a component "listens" to an external data source or service to receive updates in real-time)
+// Logging
+// Timers
+// Most side effects
+// useEffect(() => {
+//   fetchData();
+// }, []);
+
+// ⚠️ Use useLayoutEffect (special cases only)
+// Use it when:
+// You need to measure DOM elements
+// You need to mutate layout before user sees it
+// Prevent flickering / layout shift
+// useLayoutEffect(() => {
+//   const height = ref.current.offsetHeight;
+//   setHeight(height);
+// }, []);
+
+// 🚨 4. Performance Impact
+// useEffect → Non-blocking → better performance
+// useLayoutEffect → Blocking → can slow UI if overused
+// 👉 That’s why React recommends:
+// Use useEffect unless you specifically need useLayoutEffect
+
+
+
+
+
+
 

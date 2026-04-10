@@ -1203,5 +1203,15 @@ backgroundColor:"black",
 // ➡ Only current screen active (light ✅)
 
 
+// Whenever we Upgrade RN and Downgrade RN
+// Always: “Regenerate native folders (android/ios)”
+
+
+
+
+
+
+
+
 
 
